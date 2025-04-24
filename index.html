@@ -369,50 +369,51 @@
       max-width: 800px;
       margin: 0 auto;
     }
+/* FAQ Section */
+.faq-item {
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
 
-    .faq-item {
-      margin-bottom: 15px;
-      border-radius: 8px;
-      overflow: hidden;
-      background: var(--card-bg);
-      border: 1px solid rgba(0, 255, 255, 0.1);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
+.faq-question {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
 
-    .faq-question {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      font-weight: 500;
-      transition: all var(--transition-medium);
-    }
+.faq-question:hover {
+  color: var(--accent-color);
+}
 
-    .faq-question:hover {
-      color: var(--accent-color);
-    }
+.faq-question i {
+  transition: transform 0.3s ease;
+}
 
-    .faq-question i {
-      transition: transform var(--transition-medium);
-    }
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
 
-    .faq-item.active .faq-question i {
-      transform: rotate(180deg);
-    }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  color: var(--text-muted);
+  transition: max-height 0.3s ease;
+}
 
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height var(--transition-medium);
-      padding: 0 20px;
-      color: var(--text-muted);
-    }
-
-    .faq-item.active .faq-answer {
-      max-height: 300px;
-      padding: 0 20px 20px;
-    }
+.faq-item.active .faq-answer {
+  max-height: 500px; /* Adjust based on your content */
+  padding: 0 20px 20px;
+}
 
     /* Newsletter Section */
     .newsletter-section {
@@ -2512,27 +2513,25 @@ a:hover {
         goToSlide(currentIndex);
       }, 5000);
     }
-
-    function setupFAQAccordion() {
-      const faqItems = document.querySelectorAll('.faq-item');
-      
-      faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        
-        question.addEventListener('click', () => {
-          // Close all other items
-          faqItems.forEach(otherItem => {
-            if (otherItem !== item) {
-              otherItem.classList.remove('active');
-            }
-          });
-          
-          // Toggle current item
-          item.classList.toggle('active');
-        });
+function setupFAQAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+      // First close all other items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item && otherItem.classList.contains('active')) {
+          otherItem.classList.remove('active');
+        }
       });
-    }
-
+      
+      // Then toggle the clicked item
+      item.classList.toggle('active');
+    });
+  });
+}
     function setupSearch() {
       const searchInput = document.getElementById('searchInput');
       
@@ -2761,10 +2760,43 @@ a:hover {
     window.copyRawScript = copyRawScript;
     
    
+  document.addEventListener("DOMContentLoaded", function() {
+  // FAQ Accordion Functionality
+  const faqItems = document.querySelectorAll('.faq-item');
   
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    
+    question.addEventListener('click', function() {
+      // Close all other items first
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          otherItem.querySelector('.faq-answer').style.maxHeight = null;
+        }
+      });
+      
+      // Toggle current item
+      const isActive = item.classList.toggle('active');
+      
+      if (isActive) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      } else {
+        answer.style.maxHeight = null;
+      }
+    });
+    
+    // Initialize first item as open if desired
+    // item.classList.add('active');
+    // answer.style.maxHeight = answer.scrollHeight + 'px';
+  });
+});
   </script>
 </body>
 </html>
+
+
 
 
 
