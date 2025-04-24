@@ -1,2 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Free and secure scripts for popular Roblox games">
+  <title>GLOBAL SCRIPT HUB | Best Roblox Scripts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@400;500;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+  :root {
+      --primary-color: #007bff;
+      --secondary-color: #28a745;
+      --accent-color: #00ffff;
+      --accent-dark: #00b3b3;
+      --dark-bg: #121212;
+      --darker-bg: #0a0a0a;
+      --card-bg: #1a1a1a;
+      --card-hover: #222;
+      --text-color: #ffffff;
+      --text-muted: #aaaaaa;
+      --shadow-color: rgba(0, 0, 0, 0.3);
+      --highlight-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+      --transition-fast: 0.2s ease;
+      --transition-medium: 0.3s ease;
+      --transition-slow: 0.7s ease;
+      }
 
-ervged
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header with Menu Styles */
+    header {
+      padding: 15px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      height: 60px;
+      width: 60px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-family: 'Audiowide', cursive;
+      background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 0;
+    }
+
+    /* Enhanced Dropdown Menu Styles */
+    .dropdown-menu {
+      position: relative;
+      display: inline-block;
+      z-index: 1000;
+    }
+
+    .dropdown-btn {
+      background: linear-gradient(145deg, rgba(0,123,255,0.2) 0%, rgba(40,167,69,0.1) 100%);
+      color: var(--accent-color);
+      font-family: 'Audiowide', cursive;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3),
+                  0 0 10px rgba(0, 255, 255, 0.1) inset;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .dropdown-btn:hover {
+      background: linear-gradient(145deg, rgba(0,123,255,0.3) 0%, rgba(40,167,69,0.2) 100%);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
+                  0 0 15px rgba(0, 255, 255, 0.2) inset;
+      transform: translateY(-2px);
+      color: white;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background: rgba(20, 20, 30, 0.95);
+      min-width: 220px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3),
+                  0 0 15px rgba(0, 255, 255, 0.1) inset;
+      border-radius: 10px;
+      z-index: 1001;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(0, 255, 255, 0.15);
+      overflow: visible;
+    }
+
+    .dropdown-menu.active .dropdown-content {
+      display: block;
+      animation: menuAppear 0.3s ease forwards;
+    }
+
+    @keyframes menuAppear {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dropdown-content a {
+      color: var(--text-color);
+      padding: 12px 20px;
+      text-decoration: none;
+      display: block;
+      transition: all 0.3s ease;
+      border-bottom: 1px solid rgba(0, 255, 255, 0.05);
+      font-family: 'Audiowide', cursive;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    .dropdown-content a:hover {
+      background: rgba(0, 123, 255, 0.1);
+      color: var(--accent-color);
+      padding-left: 25px;
+    }
+
+    .dropdown-content a i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+      color: var(--accent-color);
+    }
+
+    /* Social Links in Dropdown */
+    .social-links {
+      display: flex;
+      padding: 10px 15px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      color: white;
+      text-decoration: none;
+      font-size: 0.8rem;
+      min-width: 100px;
+    }
+
+    .social-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-link i {
+      margin-right: 8px;
+    }
+
+    .social-link.youtube {
+      background: linear-gradient(135deg, #ff0000, #cc0000);
+    }
+
+    .social-link.youtube:hover {
+      background: linear-gradient(135deg, #cc0000, #990000);
+    }
+
+    .social-link.discord {
+      background: linear-gradient(135deg, #5865F2, #4752C4);
+    }
+
+    .social-link.discord:hover {
+      background: linear-gradient(135deg, #4752C4, #3a45a8);
+    }
+
+    /* Privacy content styles */
+    .privacy-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      flex: 1;
+    }
+
+    .privacy-container h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    }
+
+    .privacy-container h2 {
+      color: var(--accent-color);
+      font-family: 'Audiowide', cursive;
+      margin-top: 30px;
+      font-size: 1.5rem;
+      border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+      padding-bottom: 5px;
+    }
+
+    .privacy-container p, .privacy-container li {
+      color: var(--text-muted);
+    }
+
+    .privacy-container ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .privacy-container li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .privacy-container li:before {
+      content: "•";
+      color: var(--accent-color);
+      position: absolute;
+      left: 0;
+    }
+
+    .last-updated {
+      text-align: right;
+      font-style: italic;
+      color: var(--accent-color);
+      margin-bottom: 30px;
+      font-size: 0.9rem;
+    }
+
+    /* Footer styles */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-top: 1px solid rgba(0, 255, 255, 0.1);
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--darker-bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent-dark);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-color);
+    }
+
+    @media (max-width: 768px) {
+      .privacy-container {
+        margin: 20px;
+        padding: 20px;
+      }
+      
+      .privacy-container h1 {
+        font-size: 2rem;
+      }
+      
+      .dropdown-content {
+        position: fixed;
+        width: calc(100% - 40px);
+        max-width: 300px;
+        right: 20px;
+      }
+      
+      header {
+        padding: 10px 15px;
+      }
+      
+      .logo-img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .privacy-container h1 {
+        font-size: 1.8rem;
+      }
+      
+      .privacy-container h2 {
+        font-size: 1.3rem;
+      }
+      
+      .social-links {
+        flex-direction: column;
+      }
+      
+      .social-link {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="https://i.imgur.com/0aAH4Tw.png" alt="GlobalExploiter Logo" class="logo-img">
+      <div class="header-title">
+        <h1>GlobalExploiter</h1>
+      </div>
+    </a>
+
+    <!-- Enhanced Dropdown Menu -->
+    <div class="dropdown-menu" id="dropdownMenu">
+      <button class="dropdown-btn" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fas fa-bars"></i> Menu
+      </button>
+      <div class="dropdown-content">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="executor.html"><i class="fas fa-terminal"></i> Executors</a>
+        <a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+        <div class="social-links">
+          <a href="https://discord.gg/yourlink" target="_blank" rel="noopener noreferrer" class="social-link discord">
+            <i class="fab fa-discord"></i> Discord
+          </a>
+          <a href="https://youtube.com/yourlink" target="_blank" rel="noopener noreferrer" class="social-link youtube">
+            <i class="fab fa-youtube"></i> YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="privacy-container">
+    <h1>PRIVACY POLICY</h1>
+    <p class="last-updated">Effective Date: April 22, 2025</p>
+
+    <h2>Personal info</h2>
+    <p>Welcome to Globalexp. We respect your privacy and want to be completely transparent about our practices.</p>
+    <p><strong>Important:</strong> We do not collect, store, or use any personal information from our visitors.</p>
+
+    <h2>Information We <u>Don't</u> Collect</h2>
+    <p>Unlike many websites, we deliberately avoid collecting:</p>
+    <ul>
+      <li>No personal data (names, emails, addresses)</li>
+      <li>No tracking cookies or analytics</li>
+      <li>No IP address logging</li>
+      <li>No financial information</li>
+      <li>No social media connections</li>
+      <li>No device identifiers</li>
+      <li>We collect nothing from you EXCEPT a sub (:</li>
+    </ul>
+
+    <h2>How This Site Works</h2>
+    <p>Our website is designed to be completely private:</p>
+    <ul>
+      <li>All content is static - no user accounts</li>
+      <li>No databases storing visitor information</li>
+      <li>No third-party tracking scripts</li>
+      <li>No advertisements requiring user data</li>
+    </ul>
+
+    <h2>External Links</h2>
+    <p>While we link to external resources like Discord or YouTube:</p>
+      <ul>
+        <li>We don't embed their tracking widgets</li>
+        <li>Links open in new tabs with clear warnings</li>
+        <li>You only interact with those services if you choose to</li>
+      </ul>
+
+    <h2>Your Complete Privacy</h2>
+    <p>You can use this site with confidence because:</p>
+    <ul>
+      <li>Nothing is secretly running in the background</li>
+      <li>Your visit leaves no digital footprint</li>
+      <li>We don't use any "dark patterns" to trick you</li>
+    </ul>
+
+    <h2>Changes to This Policy</h2>
+    <p>If we ever change our privacy practices:</p>
+    <ul>
+      <li>We'll clearly announce it on our homepage</li>
+      <li>The change will be obvious and transparent</li>
+      <li>We'll never silently start collecting data</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>If you have any privacy questions or questions about anything:</p>
+    <ul>
+      <li><i class="fas fa-envelope"></i> Email: globalexploitor@gmail.com</li>
+      <li><i class="fab fa-discord"></i> Discord: .poisoned. id = 1129602833151434813 or my second account pluggggww  id = 1317235763271700560</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 GlobalExploiter. All rights reserved.</p>
+    <p>This service is not affiliated with Roblox Corporation.</p>
+    <p><a href="privacy.html" style="color: var(--accent-color);">Privacy Policy</a> | <a href="terms.html" style="color: var(--accent-color);">Terms of Service</a></p>
+  </footer>
+
+  <script>
+    // Enhanced Menu Toggle with ARIA attributes
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const dropdownBtn = document.querySelector('.dropdown-btn');
+
+    dropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = dropdownMenu.classList.toggle('active');
+      dropdownBtn.setAttribute('aria-expanded', isExpanded);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.remove('active');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        dropdownMenu.classList.remove('active');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Mobile menu improvements
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        dropdownMenu.classList.remove('active');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
