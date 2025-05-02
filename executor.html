@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Falling Stars</title>
   <style>
-    /* Define the body styles */
+
     body {
       display: flex;
       justify-content: center;
@@ -16,7 +16,7 @@
       margin: 0;
     }
 
-    /* Stars container */
+
     .stars {
       position: fixed;
       top: 0;
@@ -26,9 +26,8 @@
       transform: rotate(-45deg);
     }
 
-    /* Single star */
     .star {
-      --star-color: #ffffff; /* You can change this to any color */
+      --star-color: #ffffff; 
       --star-tail-length: 6em;
       --star-tail-height: 2px;
       --star-width: calc(var(--star-tail-length) / 6);
@@ -49,21 +48,19 @@
                 tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
     }
 
-    /* Mobile performance fix: Tail-fade animation will be removed on smaller screens */
     @media screen and (max-width: 750px) {
       .star {
         animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
       }
     }
 
-    /* Star falling animation */
+
     @keyframes fall {
       to {
         transform: translate3d(-30em, 0, 0);
       }
     }
 
-    /* Tail fading effect */
     @keyframes tail-fade {
       0%, 50% {
         width: var(--star-tail-length);
@@ -79,14 +76,12 @@
       }
     }
 
-    /* Star blink effect */
     @keyframes blink {
       50% {
         opacity: 0.6;
       }
     }
 
-    /* Generating random star properties */
     .star:nth-child(1) {
       --top-offset: 0vh;
       --fall-duration: 8s;
@@ -102,8 +97,7 @@
       --fall-duration: 7s;
       --fall-delay: 3s;
     }
-    /* Add as many stars as you like */
-    /* More stars will generate with different values */
+    
   </style>
 </head>
 <body>
@@ -113,7 +107,6 @@
     <div class="star"></div>
     <div class="star"></div>
     <div class="star"></div>
-    <!-- You can add more .star divs to increase the number of falling stars -->
   </div>
 </body>
 </html>
