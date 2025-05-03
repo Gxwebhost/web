@@ -1,112 +1,287 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOON</title>
-  <style>
+<!doctypehtml><html lang=en><meta charset=UTF-8><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"name=viewport><title>GLOBAL SCRIPT HUB | Executors</title><link href=https://fonts.googleapis.com rel=preconnect><link href=https://fonts.gstatic.com rel=preconnect crossorigin><link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@400;500;700&family=Orbitron:wght@500&display=swap"rel=stylesheet><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css rel=stylesheet><link href=https://i.imgur.com/0aAH4Tw.png rel=icon type=image/png><style>:root{--primary-color:#007bff;--secondary-color:#28a745;--accent-color:#00ffff;--accent-dark:#00b3b3;--dark-bg:#121212;--darker-bg:#0a0a0a;--card-bg:#1a1a1a;--card-hover:#222;--text-color:#ffffff;--text-muted:#aaaaaa;--shadow-color:rgba(0, 0, 0, 0.3);--neon-pink:#ff2a6d;--neon-blue:#05d9e8;--neon-purple:#d300c5;--text-glow:0 0 10px currentColor;--transition-fast:0.2s ease;--transition-medium:0.3s ease;--transition-slow:0.7s ease}*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{margin:0;font-family:Roboto,sans-serif;color:var(--text-color);overflow-x:hidden;line-height:1.6;min-height:100vh;background:radial-gradient(ellipse at bottom,#0d1d31 0,#0c0d13 100%)}.stars{position:fixed;top:0;left:0;width:100%;height:120%;transform:rotate(-45deg);z-index:-1;pointer-events:none}.star{--star-color:var(--neon-blue);--star-tail-length:6em;--star-tail-height:2px;--star-width:calc(var(--star-tail-length) / 6);--fall-duration:9s;--tail-fade-duration:var(--fall-duration);position:absolute;top:var(--top-offset);left:0;width:var(--star-tail-length);height:var(--star-tail-height);color:var(--star-color);background:linear-gradient(45deg,currentColor,transparent);border-radius:50%;filter:drop-shadow(0 0 6px currentColor);transform:translate3d(104em,0,0);animation:fall var(--fall-duration) var(--fall-delay) linear infinite,tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite}.star:nth-child(1){--star-tail-length:5em;--top-offset:5vh;--fall-duration:9s;--fall-delay:1s}.star:nth-child(2){--star-tail-length:7.5em;--top-offset:25vh;--fall-duration:12s;--fall-delay:3s}.star:nth-child(3){--star-tail-length:6em;--top-offset:60vh;--fall-duration:8s;--fall-delay:0s}.star:nth-child(4){--star-tail-length:5.5em;--top-offset:80vh;--fall-duration:10s;--fall-delay:2s}.star::after,.star::before{position:absolute;content:'';top:0;left:calc(var(--star-width)/ -2);width:var(--star-width);height:100%;background:linear-gradient(45deg,transparent,currentColor,transparent);border-radius:inherit;animation:blink 2s linear infinite}.star::before{transform:rotate(45deg)}.star::after{transform:rotate(-45deg)}@keyframes fall{to{transform:translate3d(-30em,0,0)}}@keyframes tail-fade{0%,50%{width:var(--star-tail-length);opacity:1}70%,80%{width:0;opacity:.4}100%{width:0;opacity:0}}@keyframes blink{50%{opacity:.6}}header{padding:15px 20px;position:relative;background:rgba(0,0,0,.5);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;z-index:100}.orb{position:absolute;background-color:rgba(255,255,255,.6);border-radius:50%;opacity:.6;will-change:transform;filter:blur(.5px)}header::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--neon-pink),var(--neon-blue),var(--neon-purple),transparent);animation:scanline 3s linear infinite}.logo-container{display:flex;align-items:center;gap:15px;flex-shrink:0}.logo-img{height:60px;width:60px;transition:all .3s ease;object-fit:contain}.header-title{display:flex;flex-direction:column}header h1{margin:0;font-family:Audiowide,cursive;font-size:clamp(1.5rem,4vw,2.2rem);background:linear-gradient(45deg,var(--accent-color),var(--primary-color));-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 10px rgba(0,255,255,.3);line-height:1}header p{margin-top:5px;color:var(--text-muted);font-size:clamp(.8rem,2vw,1rem)}.dropdown-menu{position:relative;display:inline-block;z-index:1000;flex-shrink:0}.dropdown-btn{background:linear-gradient(145deg,rgba(0,123,255,.2) 0,rgba(40,167,69,.1) 100%);color:var(--accent-color);font-family:Audiowide,cursive;font-weight:700;border:none;border-radius:30px;padding:10px 20px;cursor:pointer;transition:all .3s ease;backdrop-filter:blur(8px);border:1px solid rgba(0,255,255,.2);box-shadow:0 5px 15px rgba(0,0,0,.3),0 0 10px rgba(0,255,255,.1) inset;display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:1px;font-size:clamp(.8rem,2vw,.9rem);white-space:nowrap}.dropdown-btn:hover{background:linear-gradient(145deg,rgba(0,123,255,.3) 0,rgba(40,167,69,.2) 100%);box-shadow:0 8px 20px rgba(0,0,0,.4),0 0 15px rgba(0,255,255,.2) inset;transform:translateY(-2px);color:#fff}.dropdown-content{display:none;position:absolute;right:0;background:rgba(20,20,30,.95);min-width:220px;box-shadow:0 10px 25px rgba(0,0,0,.3),0 0 15px rgba(0,255,255,.1) inset;border-radius:10px;z-index:1001;backdrop-filter:blur(15px);border:1px solid rgba(0,255,255,.15);overflow:visible}.dropdown-menu.active .dropdown-content{display:block;animation:menuAppear .3s ease forwards}@keyframes menuAppear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}.dropdown-content a{color:var(--text-color);padding:12px 20px;text-decoration:none;display:block;transition:all .3s ease;border-bottom:1px solid rgba(0,255,255,.05);font-family:Audiowide,cursive;font-size:.85rem;letter-spacing:1px}.dropdown-content a:hover{background:rgba(0,123,255,.1);color:var(--accent-color);padding-left:25px}.dropdown-content a i{margin-right:10px;width:20px;text-align:center;color:var(--accent-color)}.social-links{display:flex;padding:10px 15px;gap:8px;flex-wrap:wrap}.social-link{flex:1 1 auto;display:flex;align-items:center;justify-content:center;padding:8px;border-radius:5px;transition:all var(--transition-medium);color:#fff;text-decoration:none;font-size:.8rem;min-width:100px}.social-link:hover{transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,0,0,.2)}.social-link i{margin-right:8px}.social-link.youtube{background:linear-gradient(135deg,red,#c00)}.social-link.youtube:hover{background:linear-gradient(135deg,#c00,#900)}.social-link.discord{background:linear-gradient(135deg,#5865f2,#4752c4)}.social-link.discord:hover{background:linear-gradient(135deg,#4752c4,#3a45a8)}.search-filter-container{max-width:1200px;margin:30px auto;padding:0 20px}.search-controls{display:flex;gap:15px;flex-wrap:wrap;margin-bottom:20px;align-items:center}.search-bar{position:relative;flex-grow:1;min-width:250px;height:44px}.search-icon{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:18px;z-index:2}.search-bar input{padding:12px 20px 12px 45px;width:100%;height:100%;border:2px solid #444;border-radius:30px;background:rgba(34,34,34,.8);color:var(--text-color);font-size:16px;transition:all var(--transition-medium);outline:0;backdrop-filter:blur(5px)}.search-bar input:focus{border-color:var(--accent-color);background-color:rgba(51,51,51,.9);box-shadow:0 0 15px rgba(0,255,255,.5)}.search-bar input::placeholder{color:#888}.filter-box{background:rgba(34,34,34,.8);border-radius:30px;border:2px solid #444;padding:10px 15px;display:flex;align-items:center;transition:all var(--transition-medium);min-width:120px;height:44px}.filter-box:hover{background:rgba(51,51,51,.9);border-color:#666}.filter-box i{color:var(--text-muted);margin-right:8px;font-size:14px}.filter-box select{background:0 0;color:var(--text-muted);border:none;padding:0 5px;font-size:13px;cursor:pointer;appearance:none;outline:0;width:100%;font-weight:700;background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23888888'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right center;background-size:12px;padding-right:20px}.filter-box select option{color:var(--text-muted);background:var(--card-bg)}.filter-box select:focus{border-color:var(--accent-color)}.filter-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}.filter-tag{padding:6px 12px;border-radius:20px;font-size:.8rem;cursor:pointer;transition:all var(--transition-medium);background:rgba(0,123,255,.1);border:1px solid rgba(0,123,255,.3);color:var(--accent-color)}.filter-tag:hover{background:rgba(0,123,255,.2)}.filter-tag.active{background:var(--primary-color);color:#fff;border-color:var(--primary-color)}.no-results{text-align:center;color:var(--neon-pink);margin:40px 0;font-size:1.1rem;display:none}.no-results i{font-size:2rem;margin-bottom:10px;display:block}.executor-hero{position:relative;padding:80px 20px;text-align:center;background:linear-gradient(135deg,rgba(0,0,0,.8) 0,rgba(20,20,30,.9) 100%);overflow:hidden;border-bottom:1px solid rgba(0,255,255,.1)}.executor-hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--neon-pink),var(--neon-blue),var(--neon-purple),transparent);animation:scanline 3s linear infinite}.executor-hero-content{max-width:1000px;margin:0 auto;position:relative;z-index:2}.executor-hero-title{font-family:Orbitron,sans-serif;font-size:clamp(2rem,6vw,3.5rem);margin-bottom:20px;background:linear-gradient(45deg,var(--accent-color),var(--primary-color));-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 15px rgba(0,255,255,.4);line-height:1.2}.executor-hero-subtitle{font-size:clamp(1rem,3vw,1.3rem);color:var(--text-muted);margin-bottom:30px;max-width:700px;margin-left:auto;margin-right:auto}.executor-container{max-width:1400px;margin:40px auto;padding:0 20px}.section-title{font-family:Orbitron,sans-serif;text-align:center;margin-bottom:40px;font-size:2rem;color:var(--accent-color);text-shadow:0 0 10px rgba(0,255,255,.3);position:relative}.section-title::after{content:'';display:block;width:80px;height:3px;background:linear-gradient(90deg,transparent,var(--accent-color),transparent);margin:15px auto 0;box-shadow:0 0 10px rgba(0,255,255,.5)}.executor-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:30px}.executor-card{background:var(--card-bg);border-radius:10px;overflow:hidden;box-shadow:0 5px 25px rgba(0,0,0,.4);border:1px solid rgba(0,255,255,.2);transition:all .3s ease;position:relative;opacity:0;transform:translateY(20px)}.executor-card.visible{opacity:1;transform:translateY(0)}.executor-card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 15px 30px rgba(0,255,255,.3),0 0 30px rgba(0,255,255,.2);z-index:100;border-color:var(--neon-blue)}.executor-card::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,42,109,.1),transparent);transition:.5s}.executor-card:hover::before{left:100%}.executor-badge{position:absolute;top:15px;left:15px;background:rgba(0,0,0,.7);color:var(--neon-blue);padding:6px 12px;border-radius:20px;font-size:.9rem;font-weight:700;backdrop-filter:blur(5px);text-shadow:var(--text-glow);z-index:2}.price-badge{position:absolute;top:15px;right:15px;background:rgba(0,0,0,.7);color:var(--neon-pink);padding:6px 12px;border-radius:20px;font-size:.9rem;font-weight:700;backdrop-filter:blur(5px);text-shadow:var(--text-glow);z-index:2}.executor-image{width:100%;height:200px;object-fit:cover;border-bottom:1px solid rgba(0,255,255,.1);transition:transform .3s ease}.executor-card:hover .executor-image{transform:scale(1.05)}.executor-info{padding:20px;display:flex;flex-direction:column;justify-content:space-between;height:calc(100% - 200px);position:relative}.executor-info h3{margin:0 0 10px 0;font-size:1.5rem;color:var(--accent-color);transition:color .3s ease;font-family:Audiowide,cursive}.executor-card:hover .executor-info h3{color:#fff;text-shadow:0 0 10px rgba(0,255,255,.5)}.executor-info p{margin:0 0 20px 0;color:var(--text-muted);font-size:1rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;min-height:4.5em;line-height:1.5em}.executor-stats{position:absolute;bottom:130px;left:20px;display:flex;gap:20px;font-size:1rem}.executor-stats span{display:flex;align-items:center;gap:5px;color:#ccc}.executor-stats i{color:var(--accent-color)}.platform-icons{display:flex;gap:10px;margin:-10px 0 10px 0;justify-content:flex-end;padding-right:10px}.platform-icon{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.7);color:#fff;font-size:14px;transition:all .3s ease;backdrop-filter:blur(5px);border:1px solid rgba(255,255,255,.1);cursor:pointer;margin:0 2px}.platform-icon:hover{transform:scale(1.1);box-shadow:0 0 10px rgba(0,255,255,.5)}.platform-icon.discord{background:rgba(88,101,242,.8)}.platform-icon.youtube{background:rgba(255,0,0,.8)}.platform-icon.website{background:rgba(0,123,255,.8)}.download-btn{background:linear-gradient(45deg,var(--primary-color),var(--accent-dark));color:#fff;border:none;padding:12px;border-radius:6px;font-weight:700;cursor:pointer;transition:all .3s ease;font-size:1rem;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:10px}.download-btn:hover{background:linear-gradient(45deg,var(--accent-dark),var(--primary-color));transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,123,255,.6)}.download-btn i{transition:transform .3s ease}.download-btn:hover i{transform:translateX(3px)}.faq-section{padding:60px 20px;background:var(--darker-bg);border-top:1px solid rgba(0,255,255,.1);border-bottom:1px solid rgba(0,255,255,.1)}.faq-container{max-width:800px;margin:0 auto}.faq-item{margin-bottom:15px;border-radius:8px;overflow:hidden;background:var(--card-bg);border:1px solid rgba(0,255,255,.1);box-shadow:0 5px 15px rgba(0,0,0,.2);transition:all .3s ease}.faq-question{padding:20px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:500;transition:all .3s ease}.faq-question:hover{color:var(--accent-color)}.faq-question i{transition:transform .3s ease}.faq-item.active .faq-question i{transform:rotate(180deg)}.faq-answer{max-height:0;overflow:hidden;padding:0 20px;color:var(--text-muted);transition:max-height .3s ease}.faq-item.active .faq-answer{max-height:500px;padding:0 20px 20px}footer{text-align:center;padding:30px 20px;background:rgba(0,0,0,.3);backdrop-filter:blur(10px);border-top:1px solid rgba(0,255,255,.1);color:var(--text-muted);font-size:.9rem}@keyframes scanline{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}@media screen and (max-width:750px){.star{animation:fall var(--fall-duration) var(--fall-delay) linear infinite}}@media (max-width:768px){.executor-grid{grid-template-columns:1fr}.executor-hero{padding:60px 20px}.executor-hero-title{font-size:2rem}.search-controls{flex-direction:column}.filter-box,.search-bar{width:100%}.platform-icon{width:28px;height:28px}}@media (max-width:480px){.executor-hero{padding:40px 20px}.executor-hero-title{font-size:1.8rem}.executor-card{min-width:280px}}</style><div class=stars><div class=star></div><div class=star></div><div class=star></div><div class=star></div></div><header><div class=logo-container><a href=https://globalexp.xyz><img alt=logo class=logo-img src=https://i.imgur.com/0aAH4Tw.png></a><div class=header-title><h1>GlobalExploiter</h1></div></div><div class=dropdown-menu id=dropdownMenu><button aria-label=Menu class=dropdown-btn id=menuButton><i class="fas fa-bars"></i> <span>Menu</span> <i class="fas fa-chevron-down"></i></button><div class=dropdown-content><a href=https://globalexp.xyz><i class="fas fa-home"></i> Home </a><a href=https://globalexp.xyz/executor><i class="fas fa-terminal"></i> Executors </a><a href=https://globalexp.xyz/policy><i class="fas fa-shield-alt"></i> Privacy Policy</a><div class=social-links><a href=https://www.youtube.com/@Globalexploitor class="youtube social-link"target=_blank aria-label="YouTube Channel"><i class="fab fa-youtube"></i> YouTube </a><a href=https://discord.gg/CA2huEV9 class="discord social-link"target=_blank aria-label="Discord Server"><i class="fab fa-discord"></i> Discord</a></div></div></div></header><section class=executor-hero><div class=executor-hero-content><h1 class=executor-hero-title>BEST EXECUTORS</h1><p class=executor-hero-subtitle>Download the best executors for roblox here</div></section><div class=search-filter-container><div class=search-controls><div class=search-bar><i class="fas fa-search search-icon"></i> <input aria-label="Search executors"id=searchInput placeholder="Search executors..."></div><div class=filter-box><i class="fas fa-filter"></i> <select aria-label="Filter by platform"id=platformFilter><option value=all>All Platforms<option value=windows>Windows<option value=android>Android<option value=ios>iOS</select></div><div class=filter-box><i class="fas fa-tag"></i> <select aria-label="Filter by price"id=priceFilter><option value=all>All Prices<option value=free>Free<option value=paid>Paid</select></div></div><div class=filter-tags id=filterTags><div class="filter-tag active"data-filter=all>All</div><div class=filter-tag data-filter=windows>Windows</div><div class=filter-tag data-filter=android>Android</div><div class=filter-tag data-filter=ios>iOS</div><div class=filter-tag data-filter=free>Free</div><div class=filter-tag data-filter=paid>Paid</div></div></div><div class=executor-container><h2 class=section-title>AVAILABLE EXECUTORS</h2><div class=no-results id=noResults><i class="fas fa-search-minus"></i><p>No executors found matching your search<p>Try different filters or check back later</div><div class=executor-grid id=executorGrid><div class=executor-card data-name=Delta data-platform=android data-price=free><div class=executor-badge>Andriod</div><div class=price-badge>Free</div><img alt="Fluxus Executor"class=executor-image src=https://modhello.com/uploads/2024/12/delta-executor-apk-thumbnails.jpg><div class=executor-info><h3>Delta</h3><p>One of the best free executors quick updates everytime roblox updates<div class=executor-stats><span><i class="fas fa-star"></i> 5/5</span> <span><i class="fas fa-download"></i> 1m+</span></div><div class=platform-icons><a href=https://discord.gg/Sc7qvdYvS2 class="platform-icon discord"target=_blank title=Discord><i class="fab fa-discord"></i> </a><a href="https://www.youtube.com/watch?v=jRnwsyGZns4"class="platform-icon youtube"target=_blank title=YouTube><i class="fab fa-youtube"></i> </a><a href=https://deltaexploits.gg class="platform-icon website"target=_blank title=Website><i class="fas fa-globe"></i></a></div><a href=https://deltaexploits.gg class=download-btn target=_blank><i class="fas fa-download"></i> Download</a></div></div><div class=executor-card data-name=swift data-platform=windows data-price=free><div class=executor-badge>Windows</div><div class=price-badge>Free</div><img alt="Delta Executor"class=executor-image src=https://framerusercontent.com/images/FN0m8YmIIITz5IBOrnLcXgMWQ.webp><div class=executor-info><h3>Swift</h3><p>Best free pc executor i cant lie but has a decent amount of down time<div class=executor-stats><span><i class="fas fa-star"></i> 4/5</span> <span><i class="fas fa-download"></i> 300K+</span></div><div class=platform-icons><a href=https://discord.gg/getswiftgg class="platform-icon discord"target=_blank title=Discord><i class="fab fa-discord"></i> </a><a href=https://youtu.be/u2rGNV7L66o class="platform-icon youtube"target=_blank title=YouTube><i class="fab fa-youtube"></i> </a><a href=https://getswift.gg class="platform-icon website"target=_blank title=Website><i class="fas fa-globe"></i></a></div><a href=https://getswift.gg class=download-btn target=_blank><i class="fas fa-download"></i> Download</a></div></div><div class=executor-card data-name=codeX data-platform=android data-price=free><div class=executor-badge>Android</div><div class=price-badge>Free</div><img alt="Hydrogen Executor"class=executor-image src="https://lh3.googleusercontent.com/PTURiU6mxghFsemorUEC31naVSv_wnMSFBUXA_t77WpcW3sNT2w7ss0yFAHYmetfZfK-TK6iwFmWns4iyhbmS05Z3A=s1280-w1280-h800"><div class=executor-info><h3>codeX</h3><p>Decent Android executor with regular updates and good performance<div class=executor-stats><span><i class="fas fa-star"></i> 4.2/5</span> <span><i class="fas fa-download"></i> 800k+</span></div><div class=platform-icons><a href=https://discord.com/invite/robloxexploits class="platform-icon discord"target=_blank title=Discord><i class="fab fa-discord"></i> </a><a href="https://www.youtube.com/watch?v=glgsFLSKbhI&pp=ygUdaG93IHRvIGluc3RhbGwgY29kZXggZXhlY3V0b3I%3D"class="platform-icon youtube"target=_blank title=YouTube><i class="fab fa-youtube"></i> </a><a href=https://codex.lol class="platform-icon website"target=_blank title=Website><i class="fas fa-globe"></i></a></div><a href=https://codex.lol class=download-btn target=_blank><i class="fas fa-download"></i> Download</a></div></div><div class=executor-card data-name="synapse z"data-platform=windows data-price=paid><div class=executor-badge>Windows</div><div class=price-badge>$6</div><img alt="Synapse X"class=executor-image src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=654,h=391,fit=crop/m6Lq6GkJxMT4WM7b/copy_of_copy_of_zee__9_-removebg-preview-mjEvyWK5QQs797V2.png"><div class=executor-info><h3>Synapse Z</h3><p>Good executor but aint paying 6$ a week for some fuckass executor💔<div class=executor-stats><span><i class="fas fa-star"></i> 4.5/5</span> <span><i class="fas fa-download"></i> 200k+</span></div><div class=platform-icons><a href=https://discord.gg/synapsez class="platform-icon discord"target=_blank title=Discord><i class="fab fa-discord"></i> </a><a href="https://www.youtube.com/watch?v=x_HClH7WeSo"class="platform-icon youtube"target=_blank title=YouTube><i class="fab fa-youtube"></i> </a><a href=https://synapsez.net class="platform-icon website"target=_blank title=Website><i class="fas fa-globe"></i></a></div><a href=https://synapsez.ne class=download-btn target=_blank><i class="fas fa-download"></i> Download</a></div></div><div class=executor-card data-name=seliware data-platform=windows data-price=paid><div class=executor-badge>Windows</div><div class=price-badge>$10</div><img alt=Script-Ware class=executor-image src="https://i.ytimg.com/vi/UqE5lzUsrqU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC9X7ZBK1lJX5lk3DvnuqX4Hk6xOA"><div class=executor-info><h3>Seliware</h3><p>Goated executor (imo) 10$ a month too<div class=executor-stats><span><i class="fas fa-star"></i> 5/5</span> <span><i class="fas fa-download"></i> 800K+</span></div><div class=platform-icons><a href=https://discord.com/invite/9gYmEWhxb6 class="platform-icon discord"target=_blank title=Discord><i class="fab fa-discord"></i> </a><a href="https://www.youtube.com/watch?v=1O10cDWRBdc"class="platform-icon youtube"target=_blank title=YouTube><i class="fab fa-youtube"></i> </a><a href=https://seliware.com class="platform-icon website"target=_blank title=Website><i class="fas fa-globe"></i></a></div><a href=https://seliware.com class=download-btn target=_blank><i class="fas fa-download"></i> Download</a></div></div><div class=executor-card data-name="arceus x"data-platform=android data-price=free><div class=executor-badge>Android</div><div class=price-badge>Free</div><img alt="Arceus X"class=executor-image src=https://arceusxneopro.com/wp-content/uploads/2024/11/Arceus-x-Neo-1024x1024.webp><div class=executor-info><h3>Arceus X</h3><p>Goated was my first exexcutor<div class=executor-stats><span><i class="fas fa-star"></i> 5/5</span> <span><i class="fas fa-download"></i> 1m+</span></div><div class=platform-icons><a href=https://discord.spdmteam.com/ class="platform-icon discord"target=_blank title=Discord><i class="fab fa-discord"></i> </a><a href=https://www.youtube.com/shorts/qxhgre5ju-c class="platform-icon youtube"target=_blank title=YouTube><i class="fab fa-youtube"></i> </a><a href=https://spdmteam.com/index/ class="platform-icon website"target=_blank title=Website><i class="fas fa-globe"></i></a></div><a href=https://spdmteam.com/index/ class=download-btn target=_blank><i class="fas fa-download"></i> Download</a></div></div></div></div><section class=faq-section><div class=faq-container><h2 class=section-title>EXECUTOR FAQ</h2><div class=faq-item><div class=faq-question><span>How do I use these executors?</span> <i class="fas fa-chevron-down"></i></div><div class=faq-answer><p>After downloading, extract the files if needed, turn off anti virus, then inject it into Roblox. You can then copy and paste scripts into the executor .</div></div><div class=faq-item><div class=faq-question><span>Are these executors safe?</span> <i class="fas fa-chevron-down"></i></div><div class=faq-answer><p>All executors listed here are widely used in the community and are safe.</div></div><div class=faq-item><div class=faq-question><span>Why do some executors require keys?</span> <i class="fas fa-chevron-down"></i></div><div class=faq-answer><p>Key systems help pay there bills and hostings etc .</div></div><div class=faq-item><div class=faq-question><span>Which executor should I choose?</span> <i class="fas fa-chevron-down"></i></div><div class=faq-answer><p>For Windows, if your poor like me use swift For Android, ios use delta or for mobile Arceus X.</div></div></div></section><script>document.addEventListener("DOMContentLoaded", () => {
+      setupEnhancedDropdown();
+      initExecutorAnimations();
+      setupFAQAccordion();
+      setupSearchAndFilters();
+    });
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-      overflow: hidden;
-      margin: 0;
-    }
-
-
-    .stars {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 120%;
-      transform: rotate(-45deg);
-    }
-
-    .star {
-      --star-color: #ffffff; 
-      --star-tail-length: 6em;
-      --star-tail-height: 2px;
-      --star-width: calc(var(--star-tail-length) / 6);
-      --fall-duration: 9s;
-      --tail-fade-duration: var(--fall-duration);
+    function setupEnhancedDropdown() {
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      const menuButton = document.getElementById('menuButton');
       
-      position: absolute;
-      top: var(--top-offset);
-      left: 0;
-      width: var(--star-tail-length);
-      height: var(--star-tail-height);
-      color: var(--star-color);
-      background: linear-gradient(45deg, currentColor, transparent);
-      border-radius: 50%;
-      filter: drop-shadow(0 0 6px currentColor);
-      transform: translate3d(104em, 0, 0);
-      animation: fall var(--fall-duration) var(--fall-delay) linear infinite, 
-                tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+      menuButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('active');
+      });
+      
+      document.addEventListener('click', function(e) {
+        if (!dropdownMenu.contains(e.target)) {
+          dropdownMenu.classList.remove('active');
+        }
+      });
     }
 
-    @media screen and (max-width: 750px) {
-      .star {
-        animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
-      }
+    function initExecutorAnimations() {
+      const executorCards = document.querySelectorAll('.executor-card');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            entry.target.style.transitionDelay = `${index * 0.1}s`;
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      executorCards.forEach(card => {
+        observer.observe(card);
+      });
     }
 
-
-    @keyframes fall {
-      to {
-        transform: translate3d(-30em, 0, 0);
-      }
+    function setupFAQAccordion() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+          // Close all other items first
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains('active')) {
+              otherItem.classList.remove('active');
+              otherItem.querySelector('.faq-answer').style.maxHeight = null;
+            }
+          });
+          
+          // Toggle current item
+          const isActive = item.classList.toggle('active');
+          
+          if (isActive) {
+            item.querySelector('.faq-answer').style.maxHeight = item.querySelector('.faq-answer').scrollHeight + 'px';
+          } else {
+            item.querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+      });
     }
 
-    @keyframes tail-fade {
-      0%, 50% {
-        width: var(--star-tail-length);
-        opacity: 1;
+    function setupSearchAndFilters() {
+      const searchInput = document.getElementById('searchInput');
+      const platformFilter = document.getElementById('platformFilter');
+      const priceFilter = document.getElementById('priceFilter');
+      const filterTags = document.getElementById('filterTags');
+      const executorCards = document.querySelectorAll('.executor-card');
+      const noResults = document.getElementById('noResults');
+      
+      // Function to filter executors
+      function filterExecutors() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const platformValue = platformFilter.value;
+        const priceValue = priceFilter.value;
+        
+        let visibleCount = 0;
+        
+        executorCards.forEach(card => {
+          const name = card.dataset.name.toLowerCase();
+          const platform = card.dataset.platform;
+          const price = card.dataset.price;
+          
+          const matchesSearch = searchTerm === '' || name.includes(searchTerm);
+          const matchesPlatform = platformValue === 'all' || platform === platformValue;
+          const matchesPrice = priceValue === 'all' || price === priceValue;
+          
+          if (matchesSearch && matchesPlatform && matchesPrice) {
+            card.style.display = 'block';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // Show/hide no results message
+        if (visibleCount === 0) {
+          noResults.style.display = 'block';
+        } else {
+          noResults.style.display = 'none';
+        }
       }
-      70%, 80% {
-        width: 0;
-        opacity: 0.4;
+      
+      // Event listeners for filters (immediate response)
+      platformFilter.addEventListener('change', filterExecutors);
+      priceFilter.addEventListener('change', filterExecutors);
+      
+      // Event listener for search (only on Enter key)
+      searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          filterExecutors();
+        }
+      });
+      
+      filterTags.addEventListener('click', (e) => {
+        if (e.target.classList.contains('filter-tag')) {
+          const filterValue = e.target.dataset.filter;
+          
+          // Update active state
+          document.querySelectorAll('.filter-tag').forEach(tag => {
+            tag.classList.remove('active');
+          });
+          e.target.classList.add('active');
+          
+          if (filterValue === 'all') {
+            platformFilter.value = 'all';
+            priceFilter.value = 'all';
+          } else if (filterValue === 'windows' || filterValue === 'android' || filterValue === 'ios') {
+            platformFilter.value = filterValue;
+            priceFilter.value = 'all';
+          } else if (filterValue === 'free' || filterValue === 'paid') {
+            platformFilter.value = 'all';
+            priceFilter.value = filterValue;
+          }
+          
+          filterExecutors();
+        }
+      });
+      
+    function setupHeroParticles() {
+      const container = document.getElementById('heroParticles');
+      if (!container) return;
+      
+      const particleCount = Math.floor(window.innerWidth / 10);
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'orb';
+        
+        const size = Math.random() * 3 + 1;
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 5;
+        
+        particle.style.cssText = `
+          width: ${size}px;
+          height: ${size}px;
+          left: ${posX}%;
+          top: ${posY}%;
+          opacity: ${Math.random() * 0.4 + 0.2};
+          animation: float ${duration}s linear ${delay}s infinite;
+        `;
+        
+        container.appendChild(particle);
       }
-      100% {
-        width: 0;
-        opacity: 0;
-      }
+      
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes float {
+          0% {
+            transform: translate(0, 0);
+          }
+          25% {
+            transform: translate(${Math.random() * 20 - 10}px, ${Math.random() * 20 - 10}px);
+          }
+          50% {
+            transform: translate(${Math.random() * 20 - 10}px, ${Math.random() * 20 - 10}px);
+          }
+          75% {
+            transform: translate(${Math.random() * 20 - 10}px, ${Math.random() * 20 - 10}px);
+          }
+          100% {
+            transform: translate(0, 0);
+          }
+        }
+      `;
+      document.head.appendChild(style);
     }
 
-    @keyframes blink {
-      50% {
-        opacity: 0.6;
-      }
-    }
-
-    .star:nth-child(1) {
-      --top-offset: 0vh;
-      --fall-duration: 8s;
-      --fall-delay: 2s;
-    }
-    .star:nth-child(2) {
-      --top-offset: 10vh;
-      --fall-duration: 10s;
-      --fall-delay: 5s;
-    }
-    .star:nth-child(3) {
-      --top-offset: 20vh;
-      --fall-duration: 7s;
-      --fall-delay: 3s;
+    function updateStatsCounter() {
+      const scriptCount = document.getElementById('scriptCount');
+      const gameCount = document.getElementById('gameCount');
+      const userCount = document.getElementById('userCount');
+      
+      if (scriptCount) animateValue(scriptCount, 0, 10, 2000);
+      if (gameCount) animateValue(gameCount, 0, 5, 2000);
+      if (userCount) animateValue(userCount, 0, 1000, 2000);
     }
     
-  </style>
-</head>
-<body>
-  <div class="stars">
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-  </div>
-</body>
-</html>
+    function animateValue(element, start, end, duration) {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        element.textContent = value === end ? end.toLocaleString() + '+' : value.toLocaleString();
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    }
+
+    function initBackgroundAnimation() {
+      const background = document.getElementById('background');
+      const numberOfOrbs = Math.floor(window.innerWidth / 20);
+      const orbs = [];
+      
+      for (let i = 0; i < numberOfOrbs; i++) {
+        const orb = document.createElement('div');
+        orb.className = 'orb';
+        
+        const size = Math.random() * 4 + 1;
+        const startX = Math.random() * (window.innerWidth + 100) - 50;
+        const startY = Math.random() * (window.innerHeight + 100) - 50;
+        const speedX = (Math.random() * 0.5 - 0.25) * (Math.random() > 0.5 ? 1 : -1);
+        const speedY = Math.random() * 2 + 1;
+        const opacity = Math.random() * 0.4 + 0.3;
+        
+        orb.style.cssText = `
+          width: ${size}px;
+          height: ${size}px;
+          left: ${startX}px;
+          top: ${startY}px;
+          opacity: ${opacity};
+        `;
+        
+        orb.dataset.speedX = speedX;
+        orb.dataset.speedY = speedY;
+        
+        background.appendChild(orb);
+        orbs.push(orb);
+      }
+      
+      function animateOrbs() {
+        orbs.forEach(orb => {
+          let currentLeft = parseFloat(orb.style.left);
+          let currentTop = parseFloat(orb.style.top);
+          let speedX = parseFloat(orb.dataset.speedX);
+          let speedY = parseFloat(orb.dataset.speedY);
+          
+          let newLeft = currentLeft + speedX;
+          let newTop = currentTop + speedY;
+          
+          if (newTop > window.innerHeight + 50) {
+            newTop = -50;
+            newLeft = Math.random() * window.innerWidth;
+          }
+          
+          if (newLeft > window.innerWidth + 50) {
+            newLeft = -50;
+          } else if (newLeft < -50) {
+            newLeft = window.innerWidth + 50;
+          }
+          
+          orb.style.left = `${newLeft}px`;
+          orb.style.top = `${newTop}px`;
+        });
+        
+        requestAnimationFrame(animateOrbs);
+      }
+      
+      animateOrbs();
+    }
+
+      filterExecutors();
+    }</script><footer><p>© 2025 GlobalExp. All Rights Reserved</footer>
