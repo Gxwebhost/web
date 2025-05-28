@@ -172,18 +172,18 @@
             animation: float 6s ease-in-out infinite;
         }
         
-       .donation-card {
-    background: linear-gradient(135deg, var(--card-bg), rgba(30, 30, 30, 0.8));
-    border: 1px solid rgba(30, 144, 255, 0.3);
-    border-radius: 16px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 360px; /* Fixed height for consistency */
-}
+        .donation-card {
+            background: linear-gradient(135deg, var(--card-bg), rgba(30, 30, 30, 0.8));
+            border: 1px solid rgba(30, 144, 255, 0.3);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 360px;
+        }
         
         .donation-card:hover {
             transform: translateY(-8px);
@@ -198,6 +198,9 @@
             padding: 0.75rem 1.5rem;
             transition: all 0.3s ease;
             box-shadow: 0 0 12px var(--blue-glow);
+            width: 100%;
+            margin-top: auto;
+            text-align: center;
         }
         
         .copy-btn:hover {
@@ -309,6 +312,10 @@
             .nav-buttons {
                 display: none;
             }
+            
+            .donation-card {
+                min-height: 340px;
+            }
         }
     </style>
 </head>
@@ -316,7 +323,7 @@
     <canvas id="particle-canvas" class="fixed top-0 left-0 w-full h-full z-[-2]"></canvas>
     <header class="navbar">
         <div class="container mx-auto flex items-center justify-between">
-            <a href="/" class="flex items-center">
+            <a href="/" class="flex items-center clickable">
                 <svg class="earth-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <defs>
                         <clipPath id="clip">
@@ -350,14 +357,13 @@
                 <h1 class="text-xl font-bold glowing-text ml-2">GlobalExploitor</h1>
             </a>
             <div class="nav-buttons">
-                       <a href="https://globalexp.xyz" class="nav-btn">
-
+                <a href="https://globalexp.xyz" class="nav-btn clickable">
                     <i class="fas fa-home mr-2"></i> Home
                 </a>
-                <a href="https://globalexp.xyz/policy" class="nav-btn">
+                <a href="https://globalexp.xyz/policy" class="nav-btn clickable">
                     <i class="fas fa-file-contract mr-2"></i> Terms
                 </a>
-                <a href="https://discord.gg/Hdt4GUgs6D" class="nav-btn">
+                <a href="https://discord.gg/Hdt4GUgs6D" class="nav-btn clickable">
                     <i class="fab fa-discord mr-2"></i> Discord
                 </a>
             </div>
@@ -403,7 +409,7 @@
                 <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
                     Your donations help us maintain and develop premium Roblox scripts. Support us by sending cryptocurrency to the addresses below!
                 </p>
-                <a href="https://discord.gg/Hdt4GUgs6D" class="primary-btn discord-btn">
+                <a href="https://discord.gg/Hdt4GUgs6D" class="primary-btn discord-btn clickable">
                     <i class="fab fa-discord mr-2"></i> Join Our Discord
                 </a>
             </div>
@@ -422,7 +428,7 @@
                     </div>
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bc1qqxdjgkuhh92akg2clwzqsxy7yjmrpd6wae9ct4gr" alt="BTC QR Code" class="w-32 h-32 mx-auto mb-4 rounded">
                     <p class="text-gray-400 text-sm break-all mb-3">bc1qqxdjgkuhh92akg2clwzqsxy7yjmrpd6wae9ct4gr</p>
-                    <button class="copy-btn w-full" onclick="copyCryptoAddress('bc1qqxdjgkuhh92akg2clwzqsxy7yjmrpd6wae9ct4gr', 'BTC')">
+                    <button class="copy-btn clickable" onclick="copyCryptoAddress('bc1qqxdjgkuhh92akg2clwzqsxy7yjmrpd6wae9ct4gr', 'BTC')">
                         <i class="fas fa-copy mr-2"></i> Copy Address
                     </button>
                 </div>
@@ -431,9 +437,9 @@
                         <i class="fab fa-ethereum text-4xl text-blue-500 mr-2"></i>
                         <h4 class="text-xl font-bold">Ethereum (ETH)</h4>
                     </div>
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x678EFc719A842F689E689E1A324E73BE0b2A0266C8A92" alt="ETH QR Code" class="w-32 h-32 mx-auto mb-4 rounded">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x678EFc719842E689E1A324E73BE0b2A0266C8A92" alt="ETH QR Code" class="w-32 h-32 mx-auto mb-4 rounded">
                     <p class="text-gray-400 text-sm break-all mb-3">0x678EFc719842E689E1A324E73BE0b2A0266C8A92</p>
-                    <button class="copy-btn w-full" onclick="copyCryptoAddress('0x678EFc719842E689E1A324E73BE0b2A0266C8A92', 'ETH')">
+                    <button class="copy-btn clickable" onclick="copyCryptoAddress('0x678EFc719842E689E1A324E73BE0b2A0266C8A92', 'ETH')">
                         <i class="fas fa-copy mr-2"></i> Copy Address
                     </button>
                 </div>
@@ -444,7 +450,7 @@
                     </div>
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x678EFc719842E689E1A324E73BE0b2A0266C8A92" alt="USDT QR Code" class="w-32 h-32 mx-auto mb-4 rounded">
                     <p class="text-gray-400 text-sm break-all mb-3">0x678EFc719842E689E1A324E73BE0b2A0266C8A92</p>
-                    <button class="copy-btn w-full" onclick="copyCryptoAddress('0x678EFc719842E689E1A324E73BE0b2A0266C8A92', 'USDT')">
+                    <button class="copy-btn clickable" onclick="copyCryptoAddress('0x678EFc719842E689E1A324E73BE0b2A0266C8A92', 'USDT')">
                         <i class="fas fa-copy mr-2"></i> Copy Address
                     </button>
                 </div>
@@ -453,9 +459,9 @@
                         <i class="fab fa-litecoin text-4xl text-gray-300 mr-2"></i>
                         <h4 class="text-xl font-bold">Litecoin (LTC)</h4>
                     </div>
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=LSjeQnEdD6nQ8ZckTHAyBQhjZFu9CpyGn2j" alt="LTC QR Code" class="w-32 h-32 mx-auto mb-4 rounded">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=LSjeQncEdDnQ8ZCkTHAyBQhjZfJu9CpyGn2j" alt="LTC QR Code" class="w-32 h-32 mx-auto mb-4 rounded">
                     <p class="text-gray-400 text-sm break-all mb-3">LSjeQncEdDnQ8ZCkTHAyBQhjZfJu9CpyGn2j</p>
-                    <button class="copy-btn w-full" onclick="copyCryptoAddress('LSjeQncEdDnQ8ZCkTHAyBQhjZfJu9CpyGn2j', 'LTC')">
+                    <button class="copy-btn clickable" onclick="copyCryptoAddress('LSjeQncEdDnQ8ZCkTHAyBQhjZfJu9CpyGn2j', 'LTC')">
                         <i class="fas fa-copy mr-2"></i> Copy Address
                     </button>
                 </div>
@@ -464,20 +470,54 @@
     </main>
     
     <footer class="py-10 text-center">
-   
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="https://globalexp.xyz" class="text-gray-400 hover:text-primary transition clickable">
+                    <i class="fas fa-home mr-2"></i> Home
+                </a>
+                <a href="https://globalexp.xyz/policy" class="text-gray-400 hover:text-primary transition clickable">
+                    <i class="fas fa-file-alt mr-2"></i> Terms
+                </a>
+                <a href="https://discord.gg/Hdt4GUgs6D" class="text-gray-400 hover:text-primary transition clickable">
+                    <i class="fab fa-discord mr-2"></i> Discord
+                </a>
             </div>
             <p class="text-gray-500 mb-2">© <span id="year"></span> GlobalExploitor. All rights reserved.</p>
             <p class="text-gray-600">
+                Made with <i class="fas fa-heart text-red-500"></i> by GlobalExploitor
             </p>
         </div>
     </footer>
     
     <div id="copy-notification" class="copy-notification">
         <i class="fas fa-check-circle"></i>
-        <span id="notification-message">Copied!</span>
+        <span id="notification-message"></span>
     </div>
     
     <script>
+        // Disable left clicks except on elements with .clickable class
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.clickable')) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }, false);
+
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        }, false);
+
+        // Disable keyboard shortcuts (Ctrl+U, Ctrl+S, Ctrl+Shift+I, F12)
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) ||
+                (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I')) ||
+                e.key === 'F12') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }, false);
+
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
         
@@ -487,7 +527,7 @@
                 showNotification(`${cryptoName} address copied to clipboard!`);
             }).catch(err => {
                 console.error('Failed to copy address:', err);
-                showNotification('Failed to copy address');
+                showNotification('Error copying address');
             });
         }
         
