@@ -1,1 +1,583 @@
-dd
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e90ff" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:title" content="Support GlobalExploitor" />
+    <meta property="og:description" content="Support our premium Roblox scripts with a crypto donation" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="GlobalExploitor Logo" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <title>Support | GlobalExploitor</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e90ff',
+                        dark: '#0a0a0a',
+                        card: 'rgba(20, 20, 20, 0.8)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 6s ease-in-out infinite',
+                        'spin-slow': 'spin 20s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --blue-color: #1e90ff;
+            --blue-glow: rgba(30, 144, 255, 0.5);
+            --dark-bg: #0a0a0a;
+            --card-bg: rgba(20, 20, 20, 0.8);
+            --neutral-glow: rgba(255, 255, 255, 0.3);
+            --accent-purple: #7c3aed;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(180deg, var(--dark-bg) 0%, #1a1a1a 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            padding-top: 80px;
+            overflow-x: hidden;
+            position: relative;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="white" stroke="none" filter="drop-shadow(0 0 3px rgba(30, 144, 255, 0.7))"/><circle cx="12" cy="12" r="4" fill="#1e90ff"/></svg>') 12 12, auto;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(30, 144, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                linear-gradient(45deg, rgba(10, 10, 10, 0.5), rgba(30, 30, 30, 0.3));
+            opacity: 0.5;
+            z-index: -1;
+            animation: bgShift 20s ease-in-out infinite;
+        }
+        
+        @keyframes bgShift {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(10px, -10px) scale(1.02); }
+        }
+        
+        a, button {
+            cursor: inherit !important;
+        }
+        
+        ::selection { 
+            background: var(--blue-glow); 
+            color: white; 
+        }
+        
+        ::-webkit-scrollbar { 
+            width: 8px; 
+        }
+        
+        ::-webkit-scrollbar-track { 
+            background: var(--dark-bg); 
+        }
+        
+        ::-webkit-scrollbar-thumb { 
+            background: var(--blue-color); 
+            border-radius: 4px; 
+            box-shadow: 0 0 8px var(--blue-glow); 
+        }
+        
+        .navbar { 
+            background: rgba(10, 10, 10, 0.95); 
+            backdrop-filter: blur(12px); 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 100; 
+            border-bottom: 1px solid rgba(30, 144, 255, 0.2);
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .glowing-text { 
+            text-shadow: 0 0 8px var(--neutral-glow), 0 0 16px var(--neutral-glow); 
+            font-weight: 800; 
+        }
+        
+        .section-title { 
+            color: #ffffff; 
+            text-shadow: 0 0 6px var(--neutral-glow), 0 0 12px var(--neutral-glow); 
+            font-weight: 800; 
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--blue-color);
+            border-radius: 3px;
+            box-shadow: 0 0 10px var(--blue-glow);
+        }
+        
+        .earth-svg {
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+            opacity: 0.8;
+            filter: drop-shadow(0 0 8px var(--blue-glow)) drop-shadow(0 0 12px rgba(30, 144, 255, 0.7));
+            transition: transform 0.3s ease, filter 0.3s ease;
+            z-index: 1;
+        }
+        
+        .earth-svg:hover {
+            filter: drop-shadow(0 0 12px var(--blue-color)) drop-shadow(0 0 20px rgba(30, 144, 255, 0.9));
+            animation: spin-slow 20s linear infinite;
+        }
+        
+        .main-earth-svg {
+            width: 80px;
+            height: 80px;
+            margin-right: 16px;
+            opacity: 0.9;
+            filter: drop-shadow(0 0 15px var(--blue-glow));
+            animation: float 6s ease-in-out infinite;
+        }
+        
+       .donation-card {
+    background: linear-gradient(135deg, var(--card-bg), rgba(30, 30, 30, 0.8));
+    border: 1px solid rgba(30, 144, 255, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 360px; /* Fixed height for consistency */
+}
+        
+        .donation-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(30, 144, 255, 0.4);
+        }
+        
+        .copy-btn {
+            background: linear-gradient(90deg, var(--blue-color), var(--accent-purple));
+            color: white;
+            border-radius: 9999px;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 12px var(--blue-glow);
+        }
+        
+        .copy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px var(--blue-glow);
+        }
+        
+        .copy-notification {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) scale(0.8);
+            background: linear-gradient(90deg, var(--blue-color), #3b82f6);
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 50px;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+            box-shadow: 0 8px 20px var(--blue-glow);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .copy-notification.show {
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+        
+        .copy-notification i {
+            font-size: 1.2rem;
+        }
+        
+        .primary-btn {
+            background: linear-gradient(90deg, var(--blue-color), #3b82f6);
+            color: white;
+            padding: 0.9rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px var(--blue-glow);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .primary-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px var(--blue-glow);
+        }
+        
+        .discord-btn {
+            background: linear-gradient(90deg, #5865F2, #4752C4);
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+        }
+        
+        .discord-btn:hover {
+            box-shadow: 0 8px 25px rgba(88, 101, 242, 0.5);
+        }
+        
+        .section-divider {
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--blue-color), var(--accent-purple), transparent);
+            margin: 2.5rem auto;
+            box-shadow: 0 0 15px var(--blue-glow);
+        }
+        
+        footer {
+            background: rgba(10, 10, 10, 0.95);
+            border-top: 1px solid rgba(30, 144, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .nav-btn {
+            background: rgba(30, 30, 30, 0.7);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(30, 144, 255, 0.2);
+            border-color: rgba(30, 144, 255, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .main-earth-svg {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .nav-buttons {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particle-canvas" class="fixed top-0 left-0 w-full h-full z-[-2]"></canvas>
+    <header class="navbar">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="/" class="flex items-center">
+                <svg class="earth-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <defs>
+                        <clipPath id="clip">
+                            <circle cx="50" cy="50" r="45"/>
+                        </clipPath>
+                    </defs>
+                    <circle cx="50" cy="50" r="50" fill="#1e3a8a"/>
+                    <circle cx="50" cy="50" r="45" fill="#4294fe"/>
+                    <g clip-path="url(#clip)">
+                        <g>
+                            <g id="land" fill="#43d8aa">
+                                <path d="M30,60 a20,20 0 0,1 40,0 a20,20 0 0,1 -40,0"/>
+                                <path d="M20,40 a15,15 0 0,0 30,0 a15,15 0 0,0 -30,0"/>
+                                <path d="M60,50 a10,10 0 0,1 20,0 a10,10 0 0,1 -20,0"/>
+                                <path d="M25,55 a18,18 0 0,0 36,0 a18,18 0 0,0 -36,0"/>
+                                <path d="M50,30 a12,12 0 0,1 24,0 a12,12 0 0,1 -24,0"/>
+                            </g>
+                            <use transform="translate(100 0)" xlink:href="#land"/>
+                            <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="-100 0" dur="10s" repeatCount="indefinite"/>
+                        </g>
+                        <g>
+                            <g id="clouds" fill="#e6ebfc">
+                                <path d="M25,45 a10,10 0 0,1 20,0 a10,10 0 0,1 -20,0"/>
+                                <path d="M55,55 a8,8 0 0,0 16,0 a8,8 0 0,0 -16,0"/>
+                            </g>
+                            <use transform="translate(100 0)" xlink:href="#clouds"/>
+                            <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="-100 0" dur="8s" repeatCount="indefinite"/>
+                        </g>
+                    </g>
+                </svg>
+                <h1 class="text-xl font-bold glowing-text ml-2">GlobalExploitor</h1>
+            </a>
+            <div class="nav-buttons">
+                <a href="/" class="nav-btn">
+                    <i class="fas fa-home mr-2"></i> Home
+                </a>
+                <a href="https://globalexp.xyz/policy" class="nav-btn">
+                    <i class="fas fa-file-contract mr-2"></i> Terms
+                </a>
+                <a href="https://discord.gg/Hdt4GUgs6D" class="nav-btn">
+                    <i class="fab fa-discord mr-2"></i> Discord
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container mx-auto px-4 py-8">
+        <section class="hero-section text-center py-16">
+            <div class="flex flex-col items-center">
+                <div class="flex items-center mb-6">
+                    <svg class="main-earth-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <defs>
+                            <clipPath id="main-clip">
+                                <circle cx="50" cy="50" r="45"/>
+                            </clipPath>
+                        </defs>
+                        <circle cx="50" cy="50" r="50" fill="#1e3a8a"/>
+                        <circle cx="50" cy="50" r="45" fill="#4294fe"/>
+                        <g clip-path="url(#main-clip)">
+                            <g>
+                                <g id="main-land" fill="#43d8aa">
+                                    <path d="M30,60 a20,20 0 0,1 40,0 a20,20 0 0,1 -40,0"/>
+                                    <path d="M20,40 a15,15 0 0,0 30,0 a15,15 0 0,0 -30,0"/>
+                                    <path d="M60,50 a10,10 0 0,1 20,0 a10,10 0 0,1 -20,0"/>
+                                    <path d="M25,55 a18,18 0 0,0 36,0 a18,18 0 0,0 -36,0"/>
+                                    <path d="M50,30 a12,12 0 0,1 24,0 a12,12 0 0,1 -24,0"/>
+                                </g>
+                                <use transform="translate(100 0)" xlink:href="#main-land"/>
+                                <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="-100 0" dur="10s" repeatCount="indefinite"/>
+                            </g>
+                            <g>
+                                <g id="main-clouds" fill="#e6ebfc">
+                                    <path d="M25,45 a10,10 0 0,1 20,0 a10,10 0 0,1 -20,0"/>
+                                    <path d="M55,55 a8,8 0 0,0 16,0 a8,8 0 0,0 -16,0"/>
+                                </g>
+                                <use transform="translate(100 0)" xlink:href="#main-clouds"/>
+                                <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="-100 0" dur="8s" repeatCount="indefinite"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <h2 class="text-5xl font-bold glowing-text">Support GlobalExploitor</h2>
+                </div>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                    Your donations help us maintain and develop premium Roblox scripts. Support us by sending cryptocurrency to the addresses below!
+                </p>
+                <a href="https://discord.gg/Hdt4GUgs6D" class="primary-btn discord-btn">
+                    <i class="fab fa-discord mr-2"></i> Join Our Discord
+                </a>
+            </div>
+        </section>
+        
+        <section class="py-16">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold section-title">Donate with Crypto</h3>
+                <div class="section-divider"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="donation-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fab fa-bitcoin text-4xl text-yellow-400 mr-2"></i>
+                        <h4 class="text-xl font-bold">Bitcoin (BTC)</h4>
+                    </div>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bc1qqxdjgkuhh92akg2clwzqsxy7yjmrpd6wae9ct4gr" alt="BTC QR Code" class="w-32 h-32 mx-auto mb-4 rounded">
+                    <p class="text-gray-400 text-sm break-all mb-3">bc1qqxdjgkuhh92akg2clwzqsxy7yjmrpd6wae9ct4gr</p>
+                    <button class="copy-btn w-full" onclick="copyCryptoAddress('bc1qqxdjgkuhh92akg2clwzqsxy7yjmrpd6wae9ct4gr', 'BTC')">
+                        <i class="fas fa-copy mr-2"></i> Copy Address
+                    </button>
+                </div>
+                <div class="donation-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fab fa-ethereum text-4xl text-blue-500 mr-2"></i>
+                        <h4 class="text-xl font-bold">Ethereum (ETH)</h4>
+                    </div>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x678EFc719A842F689E689E1A324E73BE0b2A0266C8A92" alt="ETH QR Code" class="w-32 h-32 mx-auto mb-4 rounded">
+                    <p class="text-gray-400 text-sm break-all mb-3">0x678EFc719842E689E1A324E73BE0b2A0266C8A92</p>
+                    <button class="copy-btn w-full" onclick="copyCryptoAddress('0x678EFc719842E689E1A324E73BE0b2A0266C8A92', 'ETH')">
+                        <i class="fas fa-copy mr-2"></i> Copy Address
+                    </button>
+                </div>
+                <div class="donation-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-coins text-4xl text-green-400 mr-2"></i>
+                        <h4 class="text-xl font-bold">USDT (ERC-20)</h4>
+                    </div>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x678EFc719842E689E1A324E73BE0b2A0266C8A92" alt="USDT QR Code" class="w-32 h-32 mx-auto mb-4 rounded">
+                    <p class="text-gray-400 text-sm break-all mb-3">0x678EFc719842E689E1A324E73BE0b2A0266C8A92</p>
+                    <button class="copy-btn w-full" onclick="copyCryptoAddress('0x678EFc719842E689E1A324E73BE0b2A0266C8A92', 'USDT')">
+                        <i class="fas fa-copy mr-2"></i> Copy Address
+                    </button>
+                </div>
+                <div class="donation-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fab fa-litecoin text-4xl text-gray-300 mr-2"></i>
+                        <h4 class="text-xl font-bold">Litecoin (LTC)</h4>
+                    </div>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=LSjeQnEdD6nQ8ZckTHAyBQhjZFu9CpyGn2j" alt="LTC QR Code" class="w-32 h-32 mx-auto mb-4 rounded">
+                    <p class="text-gray-400 text-sm break-all mb-3">LSjeQncEdDnQ8ZCkTHAyBQhjZfJu9CpyGn2j</p>
+                    <button class="copy-btn w-full" onclick="copyCryptoAddress('LSjeQncEdDnQ8ZCkTHAyBQhjZfJu9CpyGn2j', 'LTC')">
+                        <i class="fas fa-copy mr-2"></i> Copy Address
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="py-10 text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center gap-6 mb-2">
+                <a href="/" class="text-gray-400 hover:text-primary transition">
+                    <i class="fas fa-home mr-2"></i> Home
+                </a>
+                <a href="https://globalexp.xyz/policy" class="text-gray-400 hover:text-primary transition">
+                    <i class="fas fa-file-alt mr-2"></i> Terms
+                </a>
+                <a href="https://discord.gg/Hdt4GUgs6D" class="text-gray-400 hover:text-primary transition">
+                    <i class="fab fa-discord mr-2"></i> Discord
+                </a>
+            </div>
+            <p class="text-gray-500 mb-2">© <span id="year"></span> GlobalExploitor. All rights reserved.</p>
+            <p class="text-gray-600">
+                Made with <i class="fas fa-heart text-red-500"></i> by GlobalExpTeam
+            </p>
+        </div>
+    </footer>
+    
+    <div id="copy-notification" class="copy-notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notification-message">Copied!</span>
+    </div>
+    
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Copy crypto address
+        function copyCryptoAddress(address, cryptoName) {
+            navigator.clipboard.writeText(address).then(() => {
+                showNotification(`${cryptoName} address copied to clipboard!`);
+            }).catch(err => {
+                console.error('Failed to copy address:', err);
+                showNotification('Failed to copy address');
+            });
+        }
+        
+        // Show notification
+        function showNotification(message) {
+            const notification = document.getElementById('copy-notification');
+            document.getElementById('notification-message').textContent = message;
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+        
+        // Smooth scrolling with Lenis
+        const lenis = new Lenis({
+            lerp: 0.1,
+            smooth: true,
+            direction: 'vertical'
+        });
+        
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        
+        requestAnimationFrame(raf);
+        
+        // Particle system for background
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const particles = [];
+        const particleCount = 100;
+        
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(30, 144, 255, 0.6)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = 'rgba(30, 144, 255, 0.5)';
+            }
+        }
+        
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+        
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+        
+        animateParticles();
+        
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
