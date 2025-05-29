@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e90ff" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:title" content="Global Scripts FAQ" />
+    <meta property="og:description" content="Answers to common questions about GlobalExploitor Roblox scripts" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="GlobalExp Logo" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <title>GlobalExp | FAQ</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e90ff',
+                        dark: '#0a0a0a',
+                        card: 'rgba(20, 20, 20, 0.8)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 6s ease-in-out infinite',
+                        'spin-slow': 'spin 20s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --blue-color: #1e90ff;
+            --blue-glow: rgba(30, 144, 255, 0.5);
+            --dark-bg: #0a0a0a;
+            --card-bg: rgba(20, 20, 20, 0.8);
+            --neutral-glow: rgba(255, 255, 255, 0.3);
+            --accent-purple: #7c3aed;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(180deg, var(--dark-bg) 0%, #1a1a1a 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            padding-top: 80px;
+            overflow-x: hidden;
+            position: relative;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="white" stroke="none" filter="drop-shadow(0 0 3px rgba(30, 144, 255, 0.7))"/><circle cx="12" cy="12" r="4" fill="#1e90ff"/></svg>') 12 12, auto;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(30, 144, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                linear-gradient(45deg, rgba(10, 10, 10, 0.5), rgba(30, 30, 30, 0.3));
+            opacity: 0.5;
+            z-index: -1;
+            animation: bgShift 20s ease-in-out infinite;
+        }
+        
+        @keyframes bgShift {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(10px, -10px) scale(1.02); }
+        }
+        
+        a, button {
+            cursor: inherit !important;
+        }
+        
+        ::selection { 
+            background: var(--blue-glow); 
+            color: white; 
+        }
+        
+        ::-webkit-scrollbar { 
+            width: 8px; 
+        }
+        
+        ::-webkit-scrollbar-track { 
+            background: var(--dark-bg); 
+        }
+        
+        ::-webkit-scrollbar-thumb { 
+            background: var(--blue-color); 
+            border-radius: 4px; 
+            box-shadow: 0 0 8px var(--blue-glow); 
+        }
+        
+        .navbar { 
+            background: rgba(10, 10, 10, 0.95); 
+            backdrop-filter: blur(12px); 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 100; 
+            border-bottom: 1px solid rgba(30, 144, 255, 0.2);
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .glowing-text { 
+            text-shadow: 0 0 8px var(--neutral-glow), 0 0 16px var(--neutral-glow); 
+            font-weight: 800; 
+        }
+        
+        .section-title { 
+            color: #ffffff; 
+            text-shadow: 0 0 6px var(--neutral-glow), 0 0 12px var(--neutral-glow); 
+            font-weight: 800; 
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--blue-color);
+            border-radius: 3px;
+            box-shadow: 0 0 10px var(--blue-glow);
+        }
+        
+        .earth-svg {
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+            opacity: 0.8;
+            filter: drop-shadow(0 0 8px var(--blue-glow)) drop-shadow(0 0 12px rgba(30, 144, 255, 0.7));
+            transition: transform 0.3s ease, filter 0.3s ease;
+            z-index: 1;
+        }
+        
+        .earth-svg:hover {
+            filter: drop-shadow(0 0 12px var(--blue-color)) drop-shadow(0 0 20px rgba(30, 144, 255, 0.9));
+            animation: spin-slow 20s linear infinite;
+        }
+        
+        #executor-ticker-bar {
+            position: fixed;
+            top: 70px;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 90;
+            border-bottom: 1px solid rgba(30, 144, 255, 0.1);
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .ticker-label {
+            position: absolute;
+            left: 0;
+            padding: 0 1rem;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            background: rgb(10, 10, 10);
+            z-index: 91;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            text-shadow: 0 0 5px #ffffff;
+            letter-spacing: 1px;
+        }
+        
+        .ticker-wrap {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        
+        .ticker-content {
+            display: inline-flex;
+            white-space: nowrap;
+            animation: ticker 26s linear infinite;
+            padding-left: 120px;
+        }
+        
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 1.25rem;
+            color: #b0b0b0;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        
+        .ticker-item:hover {
+            color: var(--blue-color);
+            text-shadow: 0 0 8px var(--blue-glow);
+        }
+        
+        .ticker-item img {
+            width: 20px;
+            height: 25px;
+            margin-right: 8px;
+            border-radius: 4px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .ticker-item:hover img {
+            transform: scale(1.2) rotate(5deg);
+        }
+        
+        .ticker-item span {
+            margin-left: 8px;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .section-divider {
+            width: 600px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--blue-color), transparent);
+            margin: 2.5rem auto;
+            border-radius: 3px;
+            box-shadow: 0 0 15px var(--blue-glow);
+        }
+        
+        .faq-card {
+            background: linear-gradient(135deg, var(--card-bg), rgba(30, 30, 30, 0.8));
+            border: 1px solid rgba(30, 144, 255, 0.3);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .faq-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(30, 144, 255, 0.4);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: rgba(30, 144, 255, 0.1);
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-card.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1.5rem;
+            color: #d1d5db;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-card.active .faq-answer {
+            padding: 1rem 1.5rem;
+        }
+        
+        .faq-separator {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(30, 144, 255, 0.5), transparent);
+            margin: 0 1.5rem;
+            display: none;
+        }
+        
+        .faq-card.active .faq-separator {
+            display: block;
+        }
+        
+        .primary-btn {
+            background: linear-gradient(90deg, var(--blue-color), #3b82f6);
+            color: white;
+            padding: 0.9rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px var(--blue-glow);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .primary-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px var(--blue-glow);
+        }
+        
+        .discord-btn {
+            background: linear-gradient(90deg, #5865F2, #4752C4);
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+        }
+        
+        .discord-btn:hover {
+            box-shadow: 0 8px 25px rgba(88, 101, 242, 0.5);
+        }
+        
+        footer {
+            background: rgba(10, 10, 10, 0.95);
+            border-top: 1px solid rgba(30, 144, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .nav-btn {
+            background: rgba(30, 30, 30, 0.7);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(30, 144, 255, 0.2);
+            border-color: rgba(30, 144, 255, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .faq-question {
+                font-size: 1rem;
+            }
+            
+            .faq-answer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="/" class="flex items-center">
+                <svg class="earth-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <defs>
+                        <clipPath id="clip">
+                            <circle cx="50" cy="50" r="45"/>
+                        </clipPath>
+                    </defs>
+                    <circle cx="50" cy="50" r="50" fill="#1e3a8a"/>
+                    <circle cx="50" cy="50" r="45" fill="#4294fe"/>
+                    <g clip-path="url(#clip)">
+                        <g>
+                            <g id="land" fill="#43d8aa">
+                                <path d="M30,60 a20,20 0 0,1 40,0 a20,20 0 0,1 -40,0"/>
+                                <path d="M20,40 a15,15 0 0,0 30,0 a15,15 0 0,0 -30,0"/>
+                                <path d="M60,50 a10,10 0 0,1 20,0 a10,10 0 0,1 -20,0"/>
+                                <path d="M25,55 a18,18 0 0,0 36,0 a18,18 0 0,0 -36,0"/>
+                                <path d="M50,30 a12,12 0 0,1 24,0 a12,12 0 0,1 -24,0"/>
+                            </g>
+                            <use transform="translate(100 0)" xlink:href="#land"/>
+                            <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="-100 0" dur="10s" repeatCount="indefinite"/>
+                        </g>
+                        <g>
+                            <g id="clouds" fill="#e6ebfc">
+                                <path d="M25,45 a10,10 0 0,1 20,0 a10,10 0 0,1 -20,0"/>
+                                <path d="M55,55 a8,8 0 0,0 16,0 a8,8 0 0,0 -16,0"/>
+                            </g>
+                            <use transform="translate(100 0)" xlink:href="#clouds"/>
+                            <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="-100 0" dur="8s" repeatCount="indefinite"/>
+                        </g>
+                    </g>
+                </svg>
+                <h1 class="text-xl font-bold glowing-text ml-2">GlobalExploitor</h1>
+            </a>
+            <div class="nav-buttons">
+                <a href="https://globalexp.xyz/support" class="nav-btn">
+                    <i class="fas fa-heart mr-2"></i> Support
+                </a>
+                <a href="https://globalexp.xyz/policy" class="nav-btn">
+                    <i class="fas fa-file-contract mr-2"></i> Terms
+                </a>
+                <a href="https://globalexp.xyz/faq" class="nav-btn">
+<i class="fas fa-question-circle mr-2"></i> FAQ                </a>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="py-16 text-center">
+            <h3 class="text-4xl md:text-5xl font-bold section-title mb-6">Frequently Asked Questions</h3>
+            <div class="section-divider"></div>
+            <p class="text-gray-300 mb-10 max-w-2xl mx-auto">
+                Find answers to common questions about our Roblox scripts, community, and support.
+            </p>
+            <div class="max-w-3xl mx-auto">
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <span>How do I use the scripts on Roblox?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <hr class="faq-separator">
+                    <div class="faq-answer">
+                        Copy the script from our site, open a supported executor (e.g., Nihon, Krnl), paste the script into the executor, and click execute. Ensure you’re in the correct Roblox game (e.g., Murder Mystery 2 for the MM2 script).
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <span>Which executors are supported?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <hr class="faq-separator">
+                    <div class="faq-answer">
+                        Our scripts work with executors like Nihon, Seliware, Argon, Krnl, Vega X, and more. See the ticker bar above for the full list. Check each executor’s website for compatibility with your device.
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <span>Are the scripts safe to use?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <hr class="faq-separator">
+                    <div class="faq-answer">
+                        Yes, our scripts are safe and secure . However, use trusted executors and avoid getting ratted. besides mm2 i gotta make money somehow 🤷
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <span>How can I join the Discord community?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <hr class="faq-separator">
+                    <div class="faq-answer">
+                        Click the “Join Discord” button on our site or use the invite link: <a href="https://discord.gg/Hdt4GUgs6D" class="text-primary hover:underline">https://discord.gg/Hdt4GUgs6D</a>. Follow the server RULES.
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <span>What should I do if a script isn’t working?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <hr class="faq-separator">
+                    <div class="faq-answer">
+                        Ensure you’re using a supported executor and in the correct game. Check for updates on our site or Discord. or report it in the bugs channel in out <a href="https://discord.gg/Hdt4GUgs6D" class="text-primary hover:underline">Discord server</a>.
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <span>Can I suggest new scripts or features?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <hr class="faq-separator">
+                    <div class="faq-answer">
+                        Absolutely! Join our Discord and use the suggestions channel to share your ideas. We regularly pick on new scripts and features 
+                    </div>
+                </div>
+            </div>
+            <a href="https://discord.gg/Hdt4GUgs6D" class="primary-btn discord-btn px-10 mt-8">
+                <i class="fab fa-discord mr-2"></i> Join Our Discord for More Help
+            </a>
+        </section>
+    </main>
+    
+    <footer class="py-10 text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="https://globalexp.xyz/support" class="text-gray-400 hover:text-primary transition">
+                    <i class="fas fa-heart mr-2"></i> Support
+                </a>
+                <a href="https://globalexp.xyz/policy" class="text-gray-400 hover:text-primary transition">
+                    <i class="fas fa-file-alt mr-2"></i> Terms
+                </a>
+                <a href="https://discord.gg/Hdt4GUgs6D" target="_blank" class="text-gray-400 hover:text-primary transition">
+                    <i class="fab fa-discord mr-2"></i> Discord
+                </a>
+            </div>
+            <p class="text-gray-500 mb-2">© <span id="year"></span> GlobalExploiter. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+
+        // Disable specific keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Ctrl+U (View Source)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+            }
+            // Ctrl+S (Save Page)
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+            }
+            // Ctrl+Shift+I (Developer Tools)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+            }
+            // F12 (Developer Tools)
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Smooth scrolling with Lenis
+        const lenis = new Lenis({
+            lerp: 0.2,
+            smooth: true,
+            direction: 'vertical'
+        });
+        
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        
+        requestAnimationFrame(raf);
+        
+        // FAQ accordion toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.parentElement;
+                const isActive = card.classList.contains('active');
+                
+                // Close all other FAQ cards
+                document.querySelectorAll('.faq-card').forEach(otherCard => {
+                    otherCard.classList.remove('active');
+                    otherCard.querySelector('.faq-answer').style.maxHeight = '0';
+                });
+                
+                // Toggle the clicked card
+                if (!isActive) {
+                    card.classList.add('active');
+                    const answer = card.querySelector('.faq-answer');
+                    answer.style.maxHeight = answer.scrollHeight + 40 + 'px'; // Add padding for separator
+                }
+            });
+        });
+    </script>
+</body>
+</html>
