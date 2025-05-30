@@ -1,519 +1,585 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Free and secure scripts for popular Roblox games">
-  <title>Privacy Policy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@400;500;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <link rel="icon" href="https://i.imgur.com/0aAH4Tw.png" type="image/png"> 
-  <style>
-  :root {
-      --primary-color: #007bff;
-      --secondary-color: #28a745;
-      --accent-color: #00ffff;
-      --accent-dark: #00b3b3;
-      --dark-bg: #121212;
-      --darker-bg: #0a0a0a;
-      --card-bg: #1a1a1a;
-      --card-hover: #222;
-      --text-color: #ffffff;
-      --text-muted: #aaaaaa;
-      --shadow-color: rgba(0, 0, 0, 0.3);
-      --highlight-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-      --transition-fast: 0.2s ease;
-      --transition-medium: 0.3s ease;
-      --transition-slow: 0.7s ease;
-      }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e90ff" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:title" content="Privacy Policy | GlobalExploitor" />
+    <meta property="og:description" content="Read the privacy policy for GlobalExploitor, ensuring your data is protected." />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="GlobalExploitor Logo" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <title>Privacy Policy | GlobalExploitor</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e90ff',
+                        dark: '#0a0a0a',
+                        card: 'rgba(20, 20, 20, 0.8)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 6s ease-in-out infinite',
+                        'spin-slow': 'spin 20s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --blue-color: #1e90ff;
+            --blue-glow: rgba(30, 144, 255, 0.5);
+            --dark-bg: #0a0a0a;
+            --card-bg: rgba(20, 20, 20, 0.8);
+            --neutral-glow: rgba(255, 255, 255, 0.3);
+            --accent-purple: #7c3aed;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(180deg, var(--dark-bg) 0%, #1a1a1a 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            padding-top: 80px;
+            overflow-x: hidden;
+            position: relative;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="white" stroke="none" filter="drop-shadow(0 0 3px rgba(30, 144, 255, 0.7))"/><circle cx="12" cy="12" r="4" fill="#1e90ff"/></svg>') 12 12, auto;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(30, 144, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                linear-gradient(45deg, rgba(10, 10, 10, 0.5), rgba(30, 30, 30, 0.3));
+            opacity: 0.5;
+            z-index: -1;
+            animation: bgShift 20s ease-in-out infinite;
+        }
+        
+        @keyframes bgShift {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(10px, -10px) scale(1.02); }
+        }
+        
+        a, button {
+            cursor: inherit !important;
+        }
+        
+        ::selection { 
+            background: var(--blue-glow); 
+            color: white; 
+        }
+        
+        ::-webkit-scrollbar { 
+            width: 8px; 
+        }
+        
+        ::-webkit-scrollbar-track { 
+            background: var(--dark-bg); 
+        }
+        
+        ::-webkit-scrollbar-thumb { 
+            background: var(--blue-color); 
+            border-radius: 4px; 
+            box-shadow: 0 0 8px var(--blue-glow); 
+        }
+        
+    .navbar { 
+            background: rgba(10, 10, 10, 0.95); 
+            backdrop-filter: blur(12px); 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 100; 
+            border-bottom: 1px solid rgba(30, 144, 255, 0.2);
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: var(--dark-bg);
-      color: var(--text-color);
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Header with Menu Styles */
-    header {
-      padding: 15px 20px;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(0, 255, 255, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      text-decoration: none;
-    }
-
-    .logo-img {
-      height: 60px;
-      width: 60px;
-      transition: transform 0.3s ease;
-    }
-
-    .logo-img:hover {
-      transform: scale(1.05);
-    }
-
-    h1 {
-      font-family: 'Audiowide', cursive;
-      background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin: 0;
-    }
-
-    /* Enhanced Dropdown Menu Styles */
-    .dropdown-menu {
-      position: relative;
-      display: inline-block;
-      z-index: 1000;
-    }
-
-    .dropdown-btn {
-      background: linear-gradient(145deg, rgba(0,123,255,0.2) 0%, rgba(40,167,69,0.1) 100%);
-      color: var(--accent-color);
-      font-family: 'Audiowide', cursive;
-      font-weight: bold;
-      border: none;
-      border-radius: 30px;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(0, 255, 255, 0.2);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3),
-                  0 0 10px rgba(0, 255, 255, 0.1) inset;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.9rem;
-      white-space: nowrap;
-    }
-
-    .dropdown-btn:hover {
-      background: linear-gradient(145deg, rgba(0,123,255,0.3) 0%, rgba(40,167,69,0.2) 100%);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
-                  0 0 15px rgba(0, 255, 255, 0.2) inset;
-      transform: translateY(-2px);
-      color: white;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      right: 0;
-      background: rgba(20, 20, 30, 0.95);
-      min-width: 220px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3),
-                  0 0 15px rgba(0, 255, 255, 0.1) inset;
-      border-radius: 10px;
-      z-index: 1001;
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(0, 255, 255, 0.15);
-      overflow: visible;
-    }
-
-    .dropdown-menu.active .dropdown-content {
-      display: block;
-      animation: menuAppear 0.3s ease forwards;
-    }
-
-    @keyframes menuAppear {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .dropdown-content a {
-      color: var(--text-color);
-      padding: 12px 20px;
-      text-decoration: none;
-      display: block;
-      transition: all 0.3s ease;
-      border-bottom: 1px solid rgba(0, 255, 255, 0.05);
-      font-family: 'Audiowide', cursive;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-    }
-
-    .dropdown-content a:hover {
-      background: rgba(0, 123, 255, 0.1);
-      color: var(--accent-color);
-      padding-left: 25px;
-    }
-
-    .dropdown-content a i {
-      margin-right: 10px;
-      width: 20px;
-      text-align: center;
-      color: var(--accent-color);
-    }
-
-    /* Social Links in Dropdown */
-    .social-links {
-      display: flex;
-      padding: 10px 15px;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .social-link {
-      flex: 1 1 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-      color: white;
-      text-decoration: none;
-      font-size: 0.8rem;
-      min-width: 100px;
-    }
-
-    .social-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .social-link i {
-      margin-right: 8px;
-    }
-
-    .social-link.youtube {
-      background: linear-gradient(135deg, #ff0000, #cc0000);
-    }
-
-    .social-link.youtube:hover {
-      background: linear-gradient(135deg, #cc0000, #990000);
-    }
-
-    .social-link.discord {
-      background: linear-gradient(135deg, #5865F2, #4752C4);
-    }
-
-    .social-link.discord:hover {
-      background: linear-gradient(135deg, #4752C4, #3a45a8);
-    }
-
-    /* Privacy content styles */
-    .privacy-container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 30px;
-      background: var(--card-bg);
-      border-radius: 10px;
-      border: 1px solid rgba(0, 255, 255, 0.2);
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-      flex: 1;
-    }
-
-    .privacy-container h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2.5rem;
-      text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-    }
-
-    .privacy-container h2 {
-      color: var(--accent-color);
-      font-family: 'Audiowide', cursive;
-      margin-top: 30px;
-      font-size: 1.5rem;
-      border-bottom: 1px solid rgba(0, 255, 255, 0.2);
-      padding-bottom: 5px;
-    }
-
-    .privacy-container p, .privacy-container li {
-      color: var(--text-muted);
-    }
-
-    .privacy-container ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
-    }
-
-    .privacy-container li {
-      margin-bottom: 8px;
-      position: relative;
-      padding-left: 20px;
-    }
-
-    .privacy-container li:before {
-      content: "•";
-      color: var(--accent-color);
-      position: absolute;
-      left: 0;
-    }
-
-    .last-updated {
-      text-align: right;
-      font-style: italic;
-      color: var(--accent-color);
-      margin-bottom: 30px;
-      font-size: 0.9rem;
-    }
-
-    /* Footer styles */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.5);
-      border-top: 1px solid rgba(0, 255, 255, 0.1);
-      margin-top: 50px;
-    }
-
-    footer p {
-      margin: 5px 0;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    /* Scrollbar styling */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--darker-bg);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--accent-dark);
-      border-radius: 5px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--accent-color);
-    }
-
-    @media (max-width: 768px) {
-      .privacy-container {
-        margin: 20px;
-        padding: 20px;
-      }
-      
-      .privacy-container h1 {
-        font-size: 2rem;
-      }
-      
-      .dropdown-content {
-        position: fixed;
-        width: calc(100% - 40px);
-        max-width: 300px;
-        right: 20px;
-      }
-      
-      header {
-        padding: 10px 15px;
-      }
-      
-      .logo-img {
-        height: 50px;
-        width: 50px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .privacy-container h1 {
-        font-size: 1.8rem;
-      }
-      
-      .privacy-container h2 {
-        font-size: 1.3rem;
-      }
-      
-      .social-links {
-        flex-direction: column;
-      }
-      
-      .social-link {
-        width: 100%;
-      }
-    }
-  </style>
+        .glowing-text { 
+            text-shadow: 0 0 8px var(--neutral-glow), 0 0 16px var(--neutral-glow); 
+            font-weight: 800; 
+        }
+        
+        .section-title { 
+            color: #ffffff; 
+            text-shadow: 0 0 6px var(--neutral-glow), 0 0 12px var(--neutral-glow); 
+            font-weight: 800; 
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--blue-color);
+            border-radius: 3px;
+            box-shadow: 0 0 10px var(--blue-glow);
+        }
+        
+        .earth-svg {
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+            opacity: 0.8;
+            filter: drop-shadow(0 0 8px var(--blue-glow)) drop-shadow(0 0 12px rgba(30, 144, 255, 0.7));
+            transition: transform 0.3s ease, filter 0.3s ease;
+            z-index: 1;
+        }
+        
+        .earth-svg:hover {
+            filter: drop-shadow(0 0 12px var(--blue-color)) drop-shadow(0 0 20px rgba(30, 144, 255, 0.9));
+            animation: spin-slow 20s linear infinite;
+        }
+        
+        .privacy-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid rgba(30, 144, 255, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .privacy-container h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px var(--blue-glow);
+        }
+        
+        .privacy-container h2 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-container p, .privacy-container li {
+            color: #d1d5db;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .privacy-container ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-container li {
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .privacy-container li:before {
+            content: "•";
+            color: var(--blue-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .last-updated {
+            text-align: right;
+            font-style: italic;
+            color: var(--blue-color);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-divider {
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--blue-color), var(--accent-purple), transparent);
+            margin: 2.5rem auto;
+            box-shadow: 0 0 15px var(--blue-glow);
+        }
+        
+        footer {
+            background: rgba(10, 10, 10, 0.95);
+            border-top: 1px solid rgba(30, 144, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .nav-btn {
+            background: rgba(30, 30, 30, 0.7);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            min-width: 80px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(30, 144, 255, 0.2);
+            border-color: rgba(30, 144, 255, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.5rem;
+            }
+            
+            .nav-buttons {
+                gap: 6px;
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .nav-btn {
+                padding: 6px 10px;
+                font-size: 0.75rem;
+                min-width: 44px;
+            }
+            
+            .nav-btn i {
+                margin-right: 4px;
+                font-size: 0.75rem;
+            }
+            
+            .hero-section .flex {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .privacy-container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            
+            .privacy-container h1 {
+                font-size: 2rem;
+            }
+            
+            .privacy-container h2 {
+                font-size: 1.25rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .privacy-container h1 {
+                font-size: 1.8rem;
+            }
+            
+            .privacy-container h2 {
+                font-size: 1.2rem;
+            }
+            
+            .privacy-container p, .privacy-container li {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <a href="index.html" class="logo-container">
-      <img src="https://i.imgur.com/0aAH4Tw.png" alt="GlobalExploiter Logo" class="logo-img">
-      <div class="header-title">
-        <h1>GlobalExploiter</h1>
-      </div>
-    </a>
-
-
-    
-    <!-- Enhanced Dropdown Menu -->
-    <div class="dropdown-menu" id="dropdownMenu">
-      <button class="dropdown-btn" aria-label="Menu" id="menuButton">
-        <i class="fas fa-bars"></i> <span>Menu</span> <i class="fas fa-chevron-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="https://globalexp.xyz/home">
-          <i class="fas fa-home"></i> Home
-        </a>
-        
-                
-        <a href="https://globalexp.xyz">
-          <i class="fas fa-code"></i> Scripts
-        </a>
-        
-        <a href="https://globalexp.xyz/executor">
-          <i class="fas fa-tablet"></i> Executors
-        </a>
-        <a href="https://globalexp.xyz/policy"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
-        
-        <!-- Social Links Section -->
-        <div class="social-links">
-          <a href="https://www.youtube.com/@Globalexploitor" target="_blank" class="social-link youtube" aria-label="YouTube Channel">
-            <i class="fab fa-youtube"></i> YouTube
-          </a>
-          <a href="https://discord.gg/CA2huEV9" target="_blank" class="social-link discord" aria-label="Discord Server">
-            <i class="fab fa-discord"></i> Discord
-          </a>
+    <canvas id="particle-canvas" class="fixed top-0 left-0 w-full h-full z-[-2]"></canvas>
+    <header class="navbar">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="/" class="flex items-center clickable">
+                <svg class="earth-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <defs>
+                        <clipPath id="clip">
+                            <circle cx="50" cy="50" r="45"/>
+                        </clipPath>
+                    </defs>
+                    <circle cx="50" cy="50" r="50" fill="#1e3a8a"/>
+                    <circle cx="50" cy="50" r="45" fill="#4294fe"/>
+                    <g clip-path="url(#clip)">
+                        <g>
+                            <g id="land" fill="#43d8aa">
+                                <path d="M30,60 a20,20 0 0,1 40,0 a20,20 0 0,1 -40,0"/>
+                                <path d="M20,40 a15,15 0 0,0 30,0 a15,15 0 0,0 -30,0"/>
+                                <path d="M60,50 a10,10 0 0,1 20,0 a10,10 0 0,1 -20,0"/>
+                                <path d="M25,55 a18,18 0 0,0 36,0 a18,18 0 0,0 -36,0"/>
+                                <path d="M50,30 a12,12 0 0,1 24,0 a12,12 0 0,1 -24,0"/>
+                            </g>
+                            <use transform="translate(100 0)" xlink:href="#land"/>
+                            <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="-100 0" dur="10s" repeatCount="indefinite"/>
+                        </g>
+                        <g>
+                            <g id="clouds" fill="#e6e6ebfc">
+                                <path d="M25,45 a10,10 0 0,1 20,0 a10,10 0 0,1 -20,0"/>
+                                <path d="M55,55 a8,8 0 0,0 16,0 a8,8 0 0,0 -16,0"/>
+                            </g>
+                            <use transform="translate(100 0)" xlink:href="#clouds"/>
+                            <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="-100 0" dur="8s" repeatCount="indefinite"/>
+                        </g>
+                    </g>
+                </svg>
+                <h1 class="text-xl font-bold glowing-text ml-2">GlobalExploitor</h1>
+            </a>
+            <div class="nav-buttons">
+                <a href="https://globalexp.xyz" class="nav-btn clickable">
+                    <i class="fas fa-home mr-2"></i> Home
+                </a>
+                <a href="https://globalexp.xyz/support" class="nav-btn clickable">
+                    <i class="fas fa-heart mr-2"></i> Support
+                </a>
+                <a href="https://globalexp.xyz/faq" class="nav-btn clickable">
+                    <i class="fas fa-question-circle mr-2"></i> FAQ
+                </a>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
-  
+    </header>
+    
+    <main class="container mx-auto px-4 py-8">
+        <section class="hero-section text-center py-16">
+            <div class="flex flex-col items-center">
+                <h2 class="text-5xl font-bold glowing-text mb-6 section-title">Privacy Policy</h2>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                    Learn about how GlobalExploitor protects your privacy with our transparent policies.
+                </p>
+            </div>
+        </section>
+        
+        <section class="privacy-container">
+            <p class="last-updated">Effective Date: May 29, 2025</p>
+            
+            <h2 class="section-title">Personal Info</h2>
+            <p>Welcome to GlobalExploitor. We respect your privacy and want to be completely transparent about our practices.</p>
+            <p><strong>Important:</strong> We do not collect, store, or use any personal information from our visitors.</p>
+            
+            <h2 class="section-title">Information We <u>Don't</u> Collect</h2>
+            <p>Unlike many websites, we deliberately avoid collecting:</p>
+            <ul>
+                <li>No personal data (names, emails, addresses)</li>
+                <li>No tracking cookies or analytics</li>
+                <li>No IP address logging</li>
+                <li>No financial information</li>
+                <li>No social media connections</li>
+                <li>No device identifiers</li>
+                <li>We collect nothing from you EXCEPT a sub ( see what i did there?)</li>
+            </ul>
+            
+            <h2 class="section-title">How This Site Works</h2>
+            <p>Our website is designed to be completely private:</p>
+            <ul>
+                <li>All content is static - no user accounts</li>
+                <li>No databases storing visitor information.</li>
+                <li>No third-party tracking</li>
+                <li>No advertisements requiring user data</li>
+            </ul>
+            
+            <h2 class="section-title">External Links</h2>
+            <p>While we link to external resources like: discord serves executors</p>
+            <ul>
+                <li>We don't embed their tracking widgets</li>
+                <li>Links open in new tabs with clear warnings px</li>
+            </ul>
+            
+            <h2 class="section-title">Your Complete Privacy</h2>
+            <p>You can use this site with confidence because:</p>
+            <ul>
+                <li>Nothing is secretly running in the backgrounf </li>
+                <li>Your visit leaves no digital footprint</li>
+            </ul>
+            
+            <h2 class="section-title">Changes to This Policy</h2>
+            <p>If we ever change:</p>
+            <ul>
+                <li>We'll clearly announce it on our homepage</li>
+                <li>The change will be obvious and transparent</li>
+                <li>We'll never not announce it </li>
+            </ul>
+            
+            <h2 class="section-title">Contact</h2>
+            <p><ul>
+                  <li><i class="fas fa-envelope mr-2"></i> Email: ???????@gmail.com</li>
+                <li><i class="fab fa-discord mr-2"></i> Discord: <a href="https://discord.gg/Hdt4GUgs6D" class="text-blue-400 clickable">Join our server</a></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center gap-6 px-2 mb-6">
+                <a href="https://globalexp.xyz" class="text clickable">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="https://globalexp.xyz/support" class="text-gray-400 hover:text-blue-600 clickable">
+                    <i class="fas fa-heart"></i> Support
+                </a>
+                <a href="https://globalexp.xyz/faq" class="text-gray-400 hover:text-blue-600 clickable">
+                    <i class="fas fa-question-circle"></i> FAQ
+                </a>
+            </div>
+            <p class="text-gray-500 mb-2">© 2025 GlobalExploiter. All rights reserved.</p>
+            <p class="text-gray-600">
+                This service is not affiliated with Roblox Corporation.
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Disable left clicks except on elements with .clickable class
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.clickable')) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }, false);
 
-  </header>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        }, false);
 
-  <div class="privacy-container">
-    <h1>PRIVACY POLICY</h1>
-    <p class="last-updated">Effective Date: April 22, 2025</p>
+        // Disable keyboard shortcuts (Ctrl+U, Ctrl+S, Ctrl+Shift+I, F12)
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) ||
+                (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I')) ||
+                e.key === 'F12') {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }, false);
 
-    <h2>Personal info</h2>
-    <p>Welcome to Globalexp. We respect your privacy and want to be completely transparent about our practices.</p>
-    <p><strong>Important:</strong> We do not collect, store, or use any personal information from our visitors.</p>
+        // Set current year in footer
+        document.getElementById('year')?.textContent = '';
 
-    <h2>Information We <u>Don't</u> Collect</h2>
-    <p>Unlike many websites, we deliberately avoid collecting:</p>
-    <ul>
-      <li>No personal data (names, emails, addresses)</li>
-      <li>No tracking cookies or analytics</li>
-      <li>No IP address logging</li>
-      <li>No financial information</li>
-      <li>No social media connections</li>
-      <li>No device identifiers</li>
-      <li>We collect nothing from you EXCEPT a sub (:</li>
-    </ul>
-
-    <h2>How This Site Works</h2>
-    <p>Our website is designed to be completely private:</p>
-    <ul>
-      <li>All content is static - no user accounts</li>
-      <li>No databases storing visitor information</li>
-      <li>No third-party tracking scripts</li>
-      <li>No advertisements requiring user data</li>
-    </ul>
-
-    <h2>External Links</h2>
-    <p>While we link to external resources like Discord or YouTube:</p>
-      <ul>
-        <li>We don't embed their tracking widgets</li>
-        <li>Links open in new tabs with clear warnings</li>
-        <li>You only interact with those services if you choose to</li>
-      </ul>
-
-    <h2>Your Complete Privacy</h2>
-    <p>You can use this site with confidence because:</p>
-    <ul>
-      <li>Nothing is secretly running in the background</li>
-      <li>Your visit leaves no digital footprint</li>
-      <li>We don't use any "dark patterns" to trick you</li>
-    </ul>
-
-    <h2>Changes to This Policy</h2>
-    <p>If we ever change our privacy practices:</p>
-    <ul>
-      <li>We'll clearly announce it on our homepage</li>
-      <li>The change will be obvious and transparent</li>
-      <li>We'll never silently start collecting data</li>
-    </ul>
-
-    <h2>Contact</h2>
-    <p>If you have any privacy questions or questions about anything:</p>
-    <ul>
-      <li><i class="fas fa-envelope"></i> Email: globalexploitor@gmail.com</li>
-      <li><i class="fab fa-discord"></i> Discord: .poisoned. id = 1129602833151434813 or my second account pluggggww  id = 1317235763271700560</li>
-    </ul>
-  </div>
-
-  <footer>
-    <p>&copy; 2024 GlobalExploiter. All rights reserved.</p>
-    <p>This service is not affiliated with Roblox Corporation.</p>
-  </footer>
-
-  <script>
-    // Enhanced Menu Toggle with ARIA attributes
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    const dropdownBtn = document.querySelector('.dropdown-btn');
-
-    dropdownBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isExpanded = dropdownMenu.classList.toggle('active');
-      dropdownBtn.setAttribute('aria-expanded', isExpanded);
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.remove('active');
-        dropdownBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Close menu on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        dropdownMenu.classList.remove('active');
-        dropdownBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Mobile menu improvements
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        dropdownMenu.classList.remove('active');
-        dropdownBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
+        
+        // Smooth scrolling with Lenis
+        const lenis = new Lenis({
+            lerp: 0.1,
+            smooth: true,
+            direction: 'vertical'
         });
-      });
-    });
-  </script>
+        
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        
+        requestAnimationFrame(raf);
+        
+        // Particle system for background
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const particles = [];
+        const particleCount = 100;
+        
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(30, 144, 255, 0.6)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = 'rgba(30, 144, 255, 0.5)';
+            }
+        }
+        
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+        
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+        
+        animateParticles();
+        
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert('Right-click is disabled');
+});
+
+document.addEventListener('keydown', function(e) {
+    // Block Ctrl+U (View Source)
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        alert('Viewing page source is disabled');
+    }
+    
+    // Optional: Block F12 (DevTools), Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+    if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C'))
+    ) {
+        e.preventDefault();
+        alert('Developer tools are disabled');
+    }
+});
+    </script>
 </body>
 </html>
-
-
-
