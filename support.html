@@ -2211,6 +2211,21 @@
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         });
+
+
+        document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+}, false);
+
+// Block keyboard shortcuts (Ctrl+U, Ctrl+S, Ctrl+Shift+I, F12)
+document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I')) ||
+        e.key === 'F12') {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+}, false);
     </script>
 </body>
 </html>
