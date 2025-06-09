@@ -1,0 +1,73 @@
+ -- hi so why are u here!
+
+  local SoundService = game:GetService("SoundService")
+            local Players = game:GetService("Players")
+
+            local clickSound = SoundService:WaitForChild("Click")
+            local Player = Players.LocalPlayer
+            local Character = Player.Character or Player.CharacterAdded:Wait()
+            local PlayerGui = Player:WaitForChild("PlayerGui")
+            local TeleportUI = PlayerGui:WaitForChild("Teleport_UI")
+            local Frame = TeleportUI:WaitForChild("Frame")
+
+            local function teleportTo(position)
+                local root = Character:WaitForChild("HumanoidRootPart")
+                root.CFrame = CFrame.new(position)
+            end
+
+            local function createOutlinedButton(name, pos, bgColor, outlineColor, text, teleportPos)
+                local outlineFrame = Instance.new("Frame")
+                outlineFrame.Name = name .. "Outline"
+                outlineFrame.Size = UDim2.new(0.259808183, 4, 0.790713012, 4)
+                outlineFrame.Position = UDim2.new(pos.X.Scale, pos.X.Offset - 2, pos.Y.Scale, pos.Y.Offset - 2)
+                outlineFrame.BackgroundColor3 = outlineColor
+                outlineFrame.BorderSizePixel = 0
+                outlineFrame.ZIndex = 1
+
+                local outlineCorner = Instance.new("UICorner")
+                outlineCorner.CornerRadius = UDim.new(0.05, 0)
+                outlineCorner.Parent = outlineFrame
+
+                local button = Instance.new("TextButton")
+                button.Name = name
+                button.Size = UDim2.new(1, -4, 1, -4)
+                button.Position = UDim2.new(0, 2, 0, 2)
+                button.BackgroundColor3 = bgColor
+                button.Text = text
+                button.Font = Enum.Font.Arcade
+                button.TextColor3 = Color3.new(1, 1, 1)
+                button.TextStrokeTransparency = 0
+                button.TextStrokeColor3 = Color3.new(0, 0, 0)
+                button.TextScaled = true
+                button.ZIndex = 2
+
+                local buttonCorner = Instance.new("UICorner")
+                buttonCorner.CornerRadius = UDim.new(0.05, 0)
+                buttonCorner.Parent = button
+
+                button.MouseButton1Click:Connect(function()
+                    clickSound:Play()
+                    teleportTo(teleportPos)
+                end)
+
+                button.Parent = outlineFrame
+                outlineFrame.Parent = Frame
+            end
+
+            createOutlinedButton(
+                "PetsButton",
+                UDim2.new(0.4, 0, 0.114772804, 0),
+                Color3.fromRGB(255, 170, 0),
+                Color3.fromRGB(204, 102, 0),
+                "PETS",
+                Vector3.new(-282.4111, 2.99999976, 1.0443)
+            )
+
+            createOutlinedButton(
+                "MiddleButton",
+                UDim2.new(0.15, 0, 0.114772804, 0),
+                Color3.fromRGB(130, 0, 255),
+                Color3.fromRGB(90, 0, 180),
+                "MIDDLE",
+                Vector3.new(-97.9157, 4.4, -6.5117)
+            )
