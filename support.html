@@ -1,14 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://example.com">
-    <title>Redirecting...</title>
-    <script>
-        window.location.href = "https://example.com";
-    </script>
+  <meta charset="UTF-8">
+  <title>Discontinued</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #4a90e2, #ffffff);
+      overflow: hidden;
+    }
+
+    .blur-bg {
+      position: absolute;
+      width: 1200%;
+      height: 100%;
+      backdrop-filter: blur(6px);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #1f1f1f;
+      padding: 2em;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ff4d6d;
+      margin-bottom: 0.2em;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+      max-width: 600px;
+    }
+
+    .heart {
+      font-size: 2em;
+      margin-top: 0.5em;
+    }
+
+    .button {
+      margin-top: 1.5em;
+      padding: 0.75em 1.5em;
+      background-color: #5865F2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    .button:hover {
+      background-color: #4752c4;
+    }
+
+    .timeline {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.95em;
+      color: #333;
+      font-style: italic;
+      z-index: 1;
+    }
+  </style>
 </head>
 <body>
-    <p>Redirecting to <a href="https://example.com">https://discord.gg/Hdt4GUgs6D</a>...</p>
+  <div class="blur-bg"></div>
+
+  <div class="container">
+    <h1>Global Scripts has been discontinued</h1>
+    <p>
+Global Scripts is over Appreciate everyone who used it.If you still want to use my scripts check out my next thing<br>
+       — <strong>Nazuro</strong>.</p>
+    <div class="heart">❤️</div>
+    <a href="https://discord.gg/s59AfPUS7d" target="_blank" class="button">
+      Join Nazuro
+    </a>
+  </div>
+
+  <div class="timeline">
+    12/27/2024 5:35 PM → 6/19/2025 4:03 AM
+  </div>
 </body>
 </html>
